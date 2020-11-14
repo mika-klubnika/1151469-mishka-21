@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MISHKA: Вязание на заказ</title>
+</head>
+<body>
+  <header></header>
+  <main>
+    <section>
+      <h2>Вязание на заказ</h2>
+      <p>Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <form method="get" action="https://echo.htmlacademy.ru">
+        <fieldset>
+          <legend>Тип</legend>
+          <ul>
+            <li>
+              <input type="radio" name="type-of-knitting" value="accessory" id="accessory">
+              <label for="accessory">Аксессуар для интерьера</label>
+            </li>
+            <li>
+              <input type="radio" name="type-of-knitting" value="toy" id="toy">
+              <label for="toy">Детская игрушка</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Цвет</legend>
+          <ul>
+            <li>
+              <input type="checkbox" name="white" id="white">
+              <label for="white">Белый</label>
+            </li>
+            <li>
+              <input type="checkbox" name="gray" id="gray">
+              <label for="gray">Серый</label>
+            </li>
+            <li>
+              <input type="checkbox" name="tiffany" id="tiffany">
+              <label for="tiffany">«Тиффани»</label>
+            </li>
+            <li>
+              <input type="checkbox" name="black" id="black">
+              <label for="black">Черный</label>
+            </li>
+            <li>
+              <input type="checkbox" name="pink" id="pink">
+              <label for="pink">Розовый</label>
+            </li>
+            <li>
+              <input type="checkbox" name="orange" id="orange">
+              <label for="orange">Оранжевый</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>ФИО</legend>
+          <label for="firstname">Имя:
+            <input type="text" name="firstname" id="firstname">
+          </label>
+          <label for="surname">Фамилия:
+            <input type="text" name="surname" id="surname">
+          </label>
+          <label for="middlename">Отчество:
+            <input type="text" name="middlename" id="middlename">
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Тел</legend>
+          <label for="phone"></label>
+          <input type="tel" name="phone" id="phone">
+        </fieldset>
+        <fieldset>
+          <legend>E-mail</legend>
+          <label for="email"></label>
+          <input type="email" name="email" id="email">
+        </fieldset>
+        <fieldset>
+          <legend>Доп</legend>
+          <label for="text"></label>
+          <textarea name="text" id="text"></textarea>
+        </fieldset>
+        <span>*Поля обязательны для заполнения</span>
+        <button>ОТПРАВИТЬ ЗАКАЗ</button>
+      </form>
+    </section>
+  </main>
+  <footer></footer>
+</body>
+</html>
