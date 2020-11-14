@@ -1,46 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="ru">
+<head class="page">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MISHKA: Каталог товаров</title>
 </head>
-<body>
-  <header></header>
+
+<body class="page__body">
+
+  <header class="page-header">
+    <a class="page-header__logo" href="index.html">
+      <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина «MISHKA»">
+    </a>
+
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link">Каталог товаров</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Поиск по сайту</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#">Корзина: пока пуста</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
   <main>
-    <section>
-      <h2>Каталог товаров</h2>
-      <ul>
-        <li>
-          <img src="img/photo-1-mobile.jpg" alt="Зайчик-попрыгайчик">
-          <h3>Зайчик-попрыгайчик</h3>
-          <p>Рост 30 см, вес 200 г</p>
-          <span>1 200 руб.</span>
-          <button>Купить</button>
+    <section class="catalog">
+      <h2 class="catalog__title">Каталог товаров</h2>
+      <ul class="catalog__list">
+        <li class="catalog__item">
+          <img src="img/photo-1-mobile.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
+          <h3 class="catalog__name">Зайчик-попрыгайчик</h3>
+          <p class="catalog__parameters">Рост 30 см, вес 200 г</p>
+          <span class="catalog__price">1 200 руб.</span>
+          <button class="catalog__button">Купить</button>
         </li>
-        <li>
-          <img src="img/photo-2-mobile.jpg" alt="Корзинка для белья">
-          <h3>Корзинка для белья</h3>
-          <p>Диаметр 15 см, высота 10 см</p>
-          <span>690 руб.</span>
-          <button>Купить</button>
+        <li class="catalog__item">
+          <img src="img/photo-2-mobile.jpg" width="260" height="195" alt="Корзинка для белья">
+          <h3 class="catalog__name">Корзинка для белья</h3>
+          <p class="catalog__parameters">Диаметр 15 см, высота 10 см</p>
+          <span class="catalog__price">690 руб.</span>
+          <button class="catalog__button">Купить</button>
         </li>
-        <li>
-          <img src="img/photo-3-mobile.jpg" alt="Большая корзинка для игрушек">
-          <h3>Большая корзинка для игрушек</h3>
-          <p>Диаметр 30 см, высота 30 см</p>
-          <span>1 500 руб.</span>
-          <button>Купить</button>
+        <li class="catalog__item">
+          <img src="img/photo-3-mobile.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
+          <h3 class="catalog__name">Большая корзинка для игрушек</h3>
+          <p class="catalog__parameters">Диаметр 30 см, высота 30 см</p>
+          <span class="catalog__price">1 500 руб.</span>
+          <button class="catalog__button">Купить</button>
         </li>
       </ul>
     </section>
-    <section>
-      <h3>Процесс производства</h3>
-      <video src="" poster="img/video-mobile.jpg"></video>
-      <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-      <a href="#">Сделать заказ</a>
+
+    <section class="process">
+      <h3 class="process__title">Процесс производства</h3>
+      <video src="" width="260" height="150" poster="img/video-mobile.jpg"></video>
+      <p class="process__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+      <a class="process__link" href="#">Сделать заказ</a>
     </section>
   </main>
-  <footer></footer>
+
+  <footer class="page-footer">
+      <h2 class="visually-hidden">Мы в социальных сетях</h2>
+
+      <ul class="social-icon">
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <span class="visually-hidden">Instagram</span>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <span class="visually-hidden">Facebook</span>
+          </a>
+        </li>
+        <li class="social-icon__item">
+          <a class="social-icon__link" href="#">
+            <span class="visually-hidden">Twitter</span>
+          </a>
+        </li>
+      </ul>
+
+      <h3 class="copyright">Разработано</h3>
+      <a class="copyright__link" href="#">
+        <span class="visually-hidden">html academy</span>
+      </a>
+  </footer>
+
 </body>
 </html>
