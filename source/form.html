@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MISHKA: Вязание на заказ</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -43,7 +44,7 @@
       <form class="form-request" method="get" action="https://echo.htmlacademy.ru">
         <fieldset class="form-request__item">
           <legend class="form-request__title">Тип</legend>
-          <ul class="form-request__list radio-list">
+          <ul class="form-request__list radio-list list">
             <li class="radio-list__item">
               <input type="radio" name="type-of-knitting" value="accessory" id="accessory">
               <label for="accessory">Аксессуар для интерьера</label>
@@ -57,7 +58,7 @@
 
         <fieldset class="form-request__item">
           <legend class="form-request__title">Цвет</legend>
-          <ul class="form-request__list checkbox-list">
+          <ul class="form-request__list checkbox-list list">
             <li class="checkbox-list__item">
               <input type="checkbox" name="white" id="white">
               <label for="white">Белый</label>
@@ -87,33 +88,30 @@
 
         <fieldset class="form-request__item">
           <legend class="form-request__title">ФИО</legend>
-          <label for="firstname">Имя:
-            <input type="text" name="firstname" id="firstname">
+          <label>Имя:
+            <input type="text" name="firstname" placeholder="Введите ваше имя*">
           </label>
-          <label for="surname">Фамилия:
-            <input type="text" name="surname" id="surname">
+          <label>Фамилия:
+            <input type="text" name="surname" placeholder="Укажите фамилию*">
           </label>
-          <label for="middlename">Отчество:
-            <input type="text" name="middlename" id="middlename">
+          <label>Отчество:
+            <input type="text" name="middlename" placeholder="Отчество, если желаете">
           </label>
         </fieldset>
 
         <fieldset class="form-request__item">
-          <legend class="form-request__title">Тел</legend>
-          <label class="visually-hidden" for="phone"></label>
-          <input type="tel" name="phone" id="phone">
-        </fieldset>
+          <legend class="visually-hidden">Контактные данные</legend>
+          <label class="form-request__title" for="phone">Тел</label>
+          <input type="tel" name="phone" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
 
-        <fieldset class="form-request__item">
-          <legend class="form-request__title">E-mail</legend>
-          <label class="visually-hidden" for="email"></label>
-          <input type="email" name="email" id="email">
+          <label class="form-request__title" for="email">E-mail</label>
+          <input type="email" name="email" id="email" placeholder="Ваш Email*">
         </fieldset>
 
         <fieldset class="form-request__item">
           <legend class="form-request__title">Доп</legend>
-          <label class="visually-hidden" for="text"></label>
-          <textarea name="text" id="text"></textarea>
+          <label class="visually-hidden" for="text">Дополнительная информация</label>
+          <textarea name="text" id="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
 
         <small class="form-request__note">*Поля обязательны для заполнения</small>
