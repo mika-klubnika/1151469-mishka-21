@@ -1,25 +1,20 @@
 .form-request {
   padding: 0 30px 50px 30px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
 }
 
 .form-request__title {
   margin-bottom: 25px;
-  font-weight: bold;
-  font-size: 17px;
   line-height: 16px;
   text-transform: uppercase;
   color: @green;
 }
 
-.form-request__list {
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 18px;
-  color: @black;
-}
-
 .form-request__item {
   padding: 0;
+  margin: 0;
   border: none;
 
   &:not(:last-child) {
@@ -27,46 +22,24 @@
   }
 }
 
-.radio-list__item:not(:last-child) {
-  margin-bottom: 24px;
-}
-
-.checkbox-list__item {
-  height: 38px;
-
-  &:not(:last-child) {
-    margin-bottom: 23px;
-  }
-}
-
-.form-request__label {
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 18px;
+.form-request__list li {
+  margin-bottom: 23px;
+  padding-left: 60px;
 }
 
 .form-request__input {
-  min-width: 260px;
   height: 52px;
   border: none;
   border-bottom: 1px solid @black;
-
-  &::placeholder {
-    padding: 17px;
-    font-size: 17px;
-    line-height: 18px;
-    color: @black-opacity;
-  }
-}
-
-.full-name:not(:last-child) {
-  margin-bottom: 21px;
 }
 
 .form-request__textarea {
-  width: 260px;
   height: 142px;
   resize: none;
+}
+
+.form-request__field {
+  min-width: @element-width;
 
   &::placeholder {
     padding: 17px;
@@ -83,7 +56,7 @@
 }
 
 .form-request__button {
-  width: 260px;
+  width: @element-width;
   min-height: 52px;
   margin-top: 30px;
   display: flex;
