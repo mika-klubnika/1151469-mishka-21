@@ -1,11 +1,3 @@
-.page-body {
-  width: 320px;
-  // max-width: 1150px;
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-size: 15px;
-  line-height: 24px;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -19,6 +11,12 @@
   overflow: hidden;
 }
 
+.container {
+  width: @mobile;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
 .list {
   margin: 0;
   padding: 0;
@@ -27,10 +25,37 @@
 
 .link {
   color: #000000;
-  text-decoration: none;
 }
-
 
 .text {
   margin: 0;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: @element-width;
+  min-height: 52px;
+
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: @black-medium;
+
+  border: 2px solid @black-medium;
+}
+
+.form-fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
 }
