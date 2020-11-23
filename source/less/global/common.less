@@ -38,18 +38,24 @@
 }
 
 .button {
-  width: 260px;
-  min-height: 52px;
-
   display: flex;
   justify-content: center;
   align-items: center;
+
+  width: @element-width;
+  min-height: 52px;
 
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
   text-transform: uppercase;
-
   color: @black-medium;
+
   border: 2px solid @black-medium;
+}
+
+.form-fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
 }
