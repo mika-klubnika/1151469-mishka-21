@@ -1,8 +1,10 @@
 .content {
-  min-width: @mobile;
-  min-height: 506px;
   display: flex;
   flex-direction: column;
+
+  min-width: @mobile;
+  min-height: 506px;
+
   background-color: @white-darker;
   background-image: url("../img/hero-mobile.png");
   background-repeat: no-repeat;
@@ -11,6 +13,7 @@
 
 .content__title {
   padding-top: 73px;
+
   font-weight: bold;
   font-size: 27px;
   line-height: 30px;
@@ -18,17 +21,20 @@
 }
 
 .content__wrapper {
-  margin-top: auto;
   display: flex;
   flex-direction: column;
+
+  margin-top: auto;
 }
 
 .content__link {
+  display: flex;
+  align-items: center;
+
   min-width: @mobile;
   min-height: 103px;
   padding-left: 30px;
-  display: flex;
-  align-items: center;
+
   font-weight: bold;
   font-size: 19px;
   color: @white;
