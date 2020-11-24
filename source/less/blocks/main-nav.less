@@ -4,7 +4,18 @@
   min-width: @mobile;
   min-height: 79px;
   padding-left: 44px;
+
   border-bottom: @border-gray;
+}
+
+.main-nav {
+  margin: 0 auto;
+}
+
+@media (min-width: @mobile) {
+  .main-nav {
+    width: @mobile;
+  }
 }
 
 .main-nav__item:first-child {
@@ -14,5 +25,4 @@
 .main-nav__link {
   font-weight: bold;
   font-size: 17px;
-  line-height: 24px;
 }
