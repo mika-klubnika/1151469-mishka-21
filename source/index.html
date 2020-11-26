@@ -17,23 +17,34 @@
 
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
+        <span class="visually-hidden">Меню</span>
       </button>
 
-      <ul class="main-nav__list list">
+      <ul class="main-nav__list main-nav__list--site list">
         <li class="main-nav__item">
-          <a class="main-nav__link link" href="catalog.html">Каталог товаров</a>
+          <a class="main-nav__link main-nav__link--site link" href="catalog.html">Каталог товаров</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link link" href="form.html">Вязание на заказ</a>
+          <a class="main-nav__link main-nav__link--site link" href="form.html">Вязание на заказ</a>
         </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link link" href="#">Поиск по сайту</a>
+      </ul>
+      <ul class="main-nav__list main-nav__list--user list">
+        <li class="main-nav__item main-nav__item--search">
+          <a class="main-nav__link main-nav__link--search link" href="#">Поиск по сайту</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link link" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
+      <ul class="main-nav__list main-nav__list--sale list">
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--sale link" href="#">Новые поступления</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--sale link" href="#">Распродажа</a>
+        </li>
+      </ul>
+      <p class="main-nav__text text">Бесплатная доставка по России</p>
     </nav>
   </header>
 
@@ -93,26 +104,26 @@
       <section class="slider-reviews">
         <h3 class="slider-reviews__title title text">Отзывы</h3>
 
-        <ul class="review__list list">
-          <li class="review__item review__item--active">
+        <ul class="slider-reviews__list list">
+          <li class="slider-reviews__item slider-reviews__item--active">
             <blockquote class="blockquote">
-              <p class="review__text text">Я молодая мама, но всё равно фотографии не набирали и близко такого
+              <p class="slider-reviews__text text">Я молодая мама, но всё равно фотографии не набирали и близко такого
                 количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
                 и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
             </blockquote>
-            <cite class="review__author">
+            <cite class="slider-reviews__author">
               <b>Анастасия Красильникова</b>
               <span>@misssssiskras</span>
             </cite>
           </li>
 
-          <li class="review__item">
+          <li class="slider-reviews__item">
             <blockquote class="blockquote">
-              <p class="review__text text">Я молодая мама, но всё равно фотографии не набирали и близко такого
+              <p class="slider-reviews__text text">Я молодая мама, но всё равно фотографии не набирали и близко такого
                 количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
                 и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
             </blockquote>
-            <cite class="review__author">
+            <cite class="slider-reviews__author">
               <b>Екатерина Красильникова</b>
               <span>@misssssiskras2</span>
             </cite>
