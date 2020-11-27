@@ -1,4 +1,26 @@
 .page-footer {
   padding: 14px 30px 23px 30px;
   background-color: @white-dark;
+
+  @media (min-width: @tablet) {
+    padding: 0;
+  }
+}
+
+.page-footer__wrapper {
+  @media (min-width: @tablet) {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+  }
+}
+
+.page-footer__logo {
+  display: flex;
+  width: 90px;
+  height: min-content;
+
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
 }
