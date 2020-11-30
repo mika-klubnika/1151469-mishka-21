@@ -1,18 +1,17 @@
 .content {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: 506px;
-  margin: 0 auto;
-
   background-color: @white-darker;
   background-image: url("../img/hero-mobile.png");
   background-repeat: no-repeat;
   background-position: 50% 0;
 
+  & .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 506px;
+  }
+
   @media (min-width: @tablet) {
     background-size: 453px 453px;
-    padding: 0 50px;
   }
 }
 

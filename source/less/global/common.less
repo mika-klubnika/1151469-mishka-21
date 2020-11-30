@@ -1,3 +1,13 @@
+.page-body {
+  min-width: @mobile;
+  min-height: 100%;
+  margin: 0 auto;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -13,10 +23,20 @@
 
 .container {
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 calc(50% - var(--content-area) / 2 + var(--content-area-padding));
+}
+
+.the-edge {
+  margin: 0 calc(-1 * var(--content-area-padding));
 
   @media (min-width: @tablet) {
-    padding: 0 50px;
+    &--one-version {
+      margin: 0;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0;
   }
 }
 

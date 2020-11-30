@@ -1,3 +1,17 @@
+:root {
+  --content-area: 320px;
+  --content-area-padding: 30px;
+
+  @media (min-width: @tablet) {
+    --content-area: 768px;
+    --content-area-padding: 50px;
+  }
+
+  @media (min-width: @desktop) {
+    --content-area: 1150px;
+  }
+}
+
 @white:#ffffff;
 @white-darker:#f9f9f9;
 @white-dark: #f1f1f1;
@@ -12,7 +26,6 @@
 @green-light: #62d1ba;
 
 @mobile: 320px;
-@mobile-width-only: 767px;
 @tablet: 768px;
 @desktop: 1150px;
 

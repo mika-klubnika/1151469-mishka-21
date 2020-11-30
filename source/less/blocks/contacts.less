@@ -6,6 +6,7 @@
   @media (min-width: @desktop) {
     display: flex;
     padding-left: 175px;
+    padding-top: 80px;
   }
 }
 
@@ -22,10 +23,14 @@
   }
 }
 
+.contacts__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .contacts__map {
   display: flex;
   width: @mobile;
-  margin: 0 auto;
   padding-bottom: 40px;
 
   @media (min-width: @tablet) {
@@ -43,12 +48,13 @@
   margin: 0 auto;
 
   @media (min-width: @tablet) {
-    width: 230px;
+    min-width: 230px;
+    max-width: 260px;
   }
 
   @media (min-width: @desktop) {
     position: absolute;
     bottom: 70px;
-    left: 226px;
+    left: 177px;
   }
 }

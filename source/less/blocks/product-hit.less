@@ -3,6 +3,15 @@
   min-height: 795px;
   padding-top: 31px;
   padding-bottom: 36px;
+
+  @media (min-width: @tablet) {
+    min-height: 550px;
+  }
+
+  @media (min-width: @desktop) {
+    min-height: 732px;
+    padding-top: 54px;
+  }
 }
 
 .product-hit__title-wrapper {
@@ -13,8 +22,10 @@
   }
 
   @media (min-width: @desktop) {
-    justify-content: flex-start;
     z-index: 1;
+    justify-content: flex-start;
+    padding-top: 50px;
+    padding-bottom: 18px;
   }
 }
 
@@ -58,6 +69,7 @@
 
   @media (min-width: @desktop) {
     margin-left: 175px;
+    padding-top: 17px;
   }
 }
 
@@ -82,7 +94,7 @@
   }
 
   @media (min-width: @desktop) {
-    top: -6px;
+    top: 25px;
     width: 525px;
     height: 636px;
     z-index: -1;
