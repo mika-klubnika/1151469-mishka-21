@@ -1,3 +1,39 @@
+.checkbox-list {
+  @media (min-width: @tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: @indent;
+  }
+
+  @media (min-width: @desktop) {
+    padding-right: 170px;
+  }
+}
+
 .checkbox-list__item {
   height: 38px;
+
+  &:before {
+    top: -10px;
+    left: 0;
+  }
+
+  @media (min-width: @tablet) {
+    display: flex;
+    align-items: center;
+    width: 190px;
+
+    &:not(:nth-child(2n)) {
+      margin-right: 109px;
+
+      @media (min-width: @desktop) {
+        margin-right: 15px;
+
+      }
+    }
+  }
+
+  @media (min-width: @desktop) {
+    width: 220px;
+  }
 }
