@@ -74,7 +74,7 @@
   margin-bottom: 65px;
   padding-left: 60px;
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     width: 52px;
@@ -84,18 +84,12 @@
 }
 
 .form-request__label {
-  &:not(:last-child)>.form-request__input {
+  &:not(:last-child) > .form-request__input {
     margin-bottom: 22px;
   }
 
   @media (min-width: @tablet) {
     padding-left: @indent;
-  }
-}
-
-.form-request__item-wrapper {
-  @media (min-width: @desktop) {
-    padding-right: 170px;
   }
 }
 
@@ -151,13 +145,14 @@
 
 .form-request__inner {
   @media (min-width: @tablet) {
-  display: flex;
-  justify-content: space-between;
-}
-@media (min-width: @desktop) {
-  padding-left: 170px;
-  padding-right: 170px;
-}
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop) {
+    padding-left: 170px;
+    padding-right: 170px;
+  }
 }
 
 .form-request__note {

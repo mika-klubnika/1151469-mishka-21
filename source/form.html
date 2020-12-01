@@ -31,7 +31,7 @@
         </ul>
         <ul class="main-nav__list main-nav__list--user list">
           <li class="main-nav__item main-nav__item--search">
-            <a class="main-nav__link main-nav__link--search link" href="#">Поиск по сайту</a>
+            <a class="main-nav__link main-nav__link--search link" href="#" aria-label="Поиск по сайту"></a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link link" href="#">Корзина: пока пуста</a>
@@ -45,7 +45,7 @@
             <a class="main-nav__link main-nav__link--sale link" href="#">Распродажа</a>
           </li>
         </ul>
-        <p class="main-nav__text text">Бесплатная доставка по России</p>
+        <p class="main-nav__text text" aria-label="Бесплатная доставка по России"></p>
       </nav>
     </div>
   </header>
@@ -107,7 +107,6 @@
         </fieldset>
 
         <fieldset class="container form-request__item form-fieldset">
-          <div class="form-request__item-wrapper">
           <legend class="form-request__title">ФИО</legend>
           <label class="form-request__label">Имя:
             <input class="form-request__field form-request__input" type="text" name="firstname"
@@ -121,19 +120,18 @@
             <input class="form-request__field form-request__input" type="text" name="middlename"
               placeholder="Отчество, если желаете">
           </label>
-        </div>
         </fieldset>
 
         <fieldset class="container form-request__item form-request__item--contacts form-fieldset">
           <div class="form-request__item-wrapper">
-          <legend class="visually-hidden">Контактные данные</legend>
-          <label class="form-request__title" for="phone">Тел</label>
-          <input class="form-request__field form-request__input form-request__input--contacts" type="tel" name="phone"
-            id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*"> <br>
+            <legend class="visually-hidden">Контактные данные</legend>
+            <label class="form-request__title" for="phone">Тел</label>
+            <input class="form-request__field form-request__input form-request__input--contacts" type="tel" name="phone"
+              id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*"> <br>
 
-          <label class="form-request__title" for="email">E-mail</label>
-          <input class="form-request__field form-request__input form-request__input--contacts" type="email" name="email"
-            id="email" placeholder="Ваш Email*">
+            <label class="form-request__title" for="email">E-mail</label>
+            <input class="form-request__field form-request__input form-request__input--contacts" type="email"
+              name="email" id="email" placeholder="Ваш Email*">
           </div>
         </fieldset>
 
@@ -146,9 +144,9 @@
 
         <div class="container form-request__wrapper">
           <div class="form-request__inner">
-          <small class="form-request__note">*Поля обязательны для заполнения</small>
-          <button class="form-request__button button" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
-        </div>
+            <small class="form-request__note">*Поля обязательны для заполнения</small>
+            <button class="form-request__button button" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
+          </div>
         </div>
       </form>
     </section>
