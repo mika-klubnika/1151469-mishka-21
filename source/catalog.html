@@ -10,7 +10,8 @@
 
 <body class="page-body">
 
-  <header class="page-header">
+  <header class="page-header page-header--dark">
+    <div class="container">
     <a class="page-header__logo" href="index.html">
       <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина «MISHKA»">
     </a>
@@ -30,7 +31,7 @@
       </ul>
       <ul class="main-nav__list main-nav__list--user list">
         <li class="main-nav__item main-nav__item--search">
-          <a class="main-nav__link main-nav__link--search link" href="#">Поиск по сайту</a>
+          <a class="main-nav__link main-nav__link--search link" href="#" aria-label="Поиск по сайту"></a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link link" href="#">Корзина: пока пуста</a>
@@ -44,13 +45,14 @@
           <a class="main-nav__link main-nav__link--sale link" href="#">Распродажа</a>
         </li>
       </ul>
-      <p class="main-nav__text text">Бесплатная доставка по России</p>
+      <p class="main-nav__text text" aria-label="Бесплатная доставка по России"></p>
     </nav>
+    </div>
   </header>
 
   <main class="page-main">
     <section class="catalog">
-      <div class="wrapper-title">
+      <div class="container wrapper-title">
         <h2 class=" catalog__title title text">Каталог товаров</h2>
       </div>
       <div class="container">
@@ -117,7 +119,7 @@
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer__wrapper">
+    <div class="page-footer__wrapper container">
       <h2 class="visually-hidden">Мы в социальных сетях</h2>
 
       <a class="page-footer__logo" href="index.html">
