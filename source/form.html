@@ -17,9 +17,7 @@
       </a>
 
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Меню</span>
-        </button>
+        <button class="main-nav__toggle" type="button"></button>
 
         <ul class="main-nav__list main-nav__list--site list">
           <li class="main-nav__item">
@@ -60,90 +58,102 @@
         <p class="under-the-order__text text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму
           заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       </div>
-      <form class="form-request" method="get" action="https://echo.htmlacademy.ru">
+      <form class="form-request" method="post" action="https://echo.htmlacademy.ru">
 
         <fieldset class="container form-request__item form-fieldset">
           <legend class="form-request__title">Тип</legend>
-          <ul class="form-request__list radio-list list">
-            <li class="form-request__subitem radio-list__item">
-              <input class="visually-hidden" type="radio" name="type-of-knitting" value="accessory" id="accessory">
-              <label for="accessory">Аксессуар для интерьера</label>
-            </li>
-            <li class="form-request__subitem radio-list__item">
-              <input class="visually-hidden" type="radio" name="type-of-knitting" value="toy" id="toy">
-              <label for="toy">Детская игрушка</label>
-            </li>
-          </ul>
+          <div class="form-request__wrap-indent">
+            <ul class="form-request__list radio-list list">
+              <li class="form-request__subitem radio-list__item">
+                <input class="visually-hidden" type="radio" name="type-of-knitting" value="accessory" id="accessory">
+                <label for="accessory">Аксессуар для интерьера</label>
+              </li>
+              <li class="form-request__subitem radio-list__item">
+                <input class="visually-hidden" type="radio" name="type-of-knitting" value="toy" id="toy">
+                <label for="toy">Детская игрушка</label>
+              </li>
+            </ul>
+          </div>
         </fieldset>
 
         <fieldset class="container form-request__item form-request__item--checkbox form-fieldset">
           <legend class="form-request__title">Цвет</legend>
-          <ul class="form-request__list checkbox-list list">
-            <li class="form-request__subitem checkbox-list__item">
-              <input class="visually-hidden" type="checkbox" name="white" id="white">
-              <label for="white">Белый</label>
-            </li>
-            <li class="form-request__subitem checkbox-list__item">
-              <input class="visually-hidden" type="checkbox" name="gray" id="gray">
-              <label for="gray">Серый</label>
-            </li>
-            <li class="form-request__subitem checkbox-list__item">
-              <input class="visually-hidden" type="checkbox" name="tiffany" id="tiffany">
-              <label for="tiffany">«Тиффани»</label>
-            </li>
-            <li class="form-request__subitem checkbox-list__item">
-              <input class="visually-hidden" type="checkbox" name="black" id="black">
-              <label for="black">Черный</label>
-            </li>
-            <li class="form-request__subitem checkbox-list__item">
-              <input class="visually-hidden" type="checkbox" name="pink" id="pink">
-              <label for="pink">Розовый</label>
-            </li>
-            <li class="form-request__subitem checkbox-list__item">
-              <input class="visually-hidden" type="checkbox" name="orange" id="orange">
-              <label for="orange">Оранжевый</label>
-            </li>
-          </ul>
+          <div class="form-request__wrap-indent">
+            <ul class="form-request__list checkbox-list list">
+              <li class="form-request__subitem checkbox-list__item">
+                <input class="visually-hidden" type="checkbox" name="white" id="white">
+                <label for="white">Белый</label>
+              </li>
+              <li class="form-request__subitem checkbox-list__item">
+                <input class="visually-hidden" type="checkbox" name="gray" id="gray">
+                <label for="gray">Серый</label>
+              </li>
+              <li class="form-request__subitem checkbox-list__item">
+                <input class="visually-hidden" type="checkbox" name="tiffany" id="tiffany">
+                <label for="tiffany">«Тиффани»</label>
+              </li>
+              <li class="form-request__subitem checkbox-list__item">
+                <input class="visually-hidden" type="checkbox" name="black" id="black">
+                <label for="black">Черный</label>
+              </li>
+              <li class="form-request__subitem checkbox-list__item">
+                <input class="visually-hidden" type="checkbox" name="pink" id="pink">
+                <label for="pink">Розовый</label>
+              </li>
+              <li class="form-request__subitem checkbox-list__item">
+                <input class="visually-hidden" type="checkbox" name="orange" id="orange">
+                <label for="orange">Оранжевый</label>
+              </li>
+            </ul>
+          </div>
         </fieldset>
 
         <fieldset class="container form-request__item form-fieldset">
           <legend class="form-request__title">ФИО</legend>
-          <label class="form-request__label">Имя:
-            <input class="form-request__field form-request__input" type="text" name="firstname"
-              placeholder="Введите ваше имя*">
-          </label> <br>
-          <label class="form-request__label">Фамилия:
-            <input class="form-request__field form-request__input" type="text" name="surname"
-              placeholder="Укажите фамилию*">
-          </label> <br>
-          <label class="form-request__label">Отчество:
-            <input class="form-request__field form-request__input" type="text" name="middlename"
-              placeholder="Отчество, если желаете">
-          </label>
+          <div class="form-request__wrap-indent">
+            <label class="form-request__label">Имя:
+              <input class="form-request__field form-request__input" type="text" name="firstname"
+                placeholder="Введите ваше имя*">
+            </label>
+            <label class="form-request__label">Фамилия:
+              <input class="form-request__field form-request__input" type="text" name="surname"
+                placeholder="Укажите фамилию*">
+            </label>
+            <label class="form-request__label">Отчество:
+              <input class="form-request__field form-request__input" type="text" name="middlename"
+                placeholder="Отчество, если желаете">
+            </label>
+          </div>
         </fieldset>
 
         <fieldset class="container form-request__item form-request__item--contacts form-fieldset">
+          <legend class="visually-hidden">Контактные данные</legend>
           <div class="form-request__item-wrapper">
-            <legend class="visually-hidden">Контактные данные</legend>
             <label class="form-request__title" for="phone">Тел</label>
-            <input class="form-request__field form-request__input form-request__input--contacts" type="tel" name="phone"
-              id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*"> <br>
+            <div class="form-request__wrap-indent">
+              <input class="form-request__field form-request__input form-request__input--contacts" type="tel"
+                name="phone" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+            </div>
 
             <label class="form-request__title" for="email">E-mail</label>
-            <input class="form-request__field form-request__input form-request__input--contacts" type="email"
-              name="email" id="email" placeholder="Ваш Email*">
+            <div class="form-request__wrap-indent">
+              <input class="form-request__field form-request__input form-request__input--contacts" type="email"
+                name="email" id="email" placeholder="Ваш Email*">
+            </div>
           </div>
         </fieldset>
 
         <fieldset class="container form-request__item form-fieldset">
           <legend class="form-request__title">Доп</legend>
           <label class="visually-hidden" for="text">Дополнительная информация</label>
-          <textarea class="form-request__field form-request__textarea" name="text" id="text"
-            placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          <div class="form-request__wrap-indent">
+            <textarea class="form-request__field form-request__textarea" name="text" id="text"
+              placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </div>
         </fieldset>
 
         <div class="container form-request__wrapper">
-          <div class="form-request__inner">
+          <div class="form-request__inner form-request__wrap-indent form-request__wrap-indent--last-element">
             <small class="form-request__note">*Поля обязательны для заполнения</small>
             <button class="form-request__button button" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
           </div>
