@@ -1,6 +1,17 @@
 .about-us {
   padding-top: 30px;
   padding-bottom: 30px;
+
+  @media (min-width: @desktop) {
+    padding: 30px 176px 90px 176px;
+  }
+}
+
+.about-us__list-wrapper {
+  @media (min-width: @tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .about-us__item {
@@ -11,4 +22,10 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
+
+  @media (min-width: @tablet) {
+    width: 334px;
+    font-size: 20px;
+    line-height: 22px;
+  }
 }

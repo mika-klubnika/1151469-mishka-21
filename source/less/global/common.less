@@ -1,3 +1,13 @@
+.page-body {
+  min-width: @mobile;
+  min-height: 100%;
+  margin: 0;
+
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 24px;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -12,9 +22,22 @@
 }
 
 .container {
-  width: @mobile;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 calc(50% - var(--content-area) / 2 + var(--content-area-padding));
+}
+
+.the-edge {
+  margin: 0 calc(-1 * var(--content-area-padding));
+
+  @media (min-width: @tablet) {
+    &--one-version {
+      margin: 0;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0;
+  }
 }
 
 .list {
@@ -35,6 +58,16 @@
   font-weight: bold;
   font-size: 25px;
   line-height: 30px;
+
+  @media (min-width: @tablet) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: @desktop) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .wrapper-title {
@@ -51,7 +84,7 @@
   justify-content: center;
   align-items: center;
 
-  width: @element-width;
+  min-width: @element-width;
   min-height: 52px;
 
   font-weight: bold;
@@ -67,4 +100,8 @@
   padding: 0;
   margin: 0;
   border: none;
+}
+
+.blockquote {
+  margin: 0;
 }

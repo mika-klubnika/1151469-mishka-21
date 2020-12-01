@@ -17,27 +17,38 @@
 
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
+        <span class="visually-hidden">Меню</span>
       </button>
 
-      <ul class="main-nav__list list">
+      <ul class="main-nav__list main-nav__list--site list">
         <li class="main-nav__item">
-          <a class="main-nav__link link" href="catalog.html">Каталог товаров</a>
+          <a class="main-nav__link main-nav__link--site link" href="catalog.html">Каталог товаров</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link link">Вязание на заказ</a>
+          <a class="main-nav__link main-nav__link--site link">Вязание на заказ</a>
         </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link link" href="#">Поиск по сайту</a>
+      </ul>
+      <ul class="main-nav__list main-nav__list--user list">
+        <li class="main-nav__item main-nav__item--search">
+          <a class="main-nav__link main-nav__link--search link" href="#">Поиск по сайту</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link link" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
+      <ul class="main-nav__list main-nav__list--sale list">
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--sale link" href="#">Новые поступления</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--sale link" href="#">Распродажа</a>
+        </li>
+      </ul>
+      <p class="main-nav__text text">Бесплатная доставка по России</p>
     </nav>
   </header>
 
-  <main>
+  <main class="page-main">
     <h1 class="visually-hidden">Страница формы</h1>
     <section class="under-the-order">
       <div class="wrapper-title">
@@ -134,8 +145,12 @@
   </main>
 
   <footer class="page-footer">
-    <div class="container">
+    <div class="page-footer__wrapper">
       <h2 class="visually-hidden">Мы в социальных сетях</h2>
+
+      <a class="page-footer__logo" href="index.html">
+        <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина «MISHKA»">
+      </a>
 
       <ul class="social-icon list">
         <li class="social-icon__item">

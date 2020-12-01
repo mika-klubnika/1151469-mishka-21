@@ -1,13 +1,26 @@
 .detailed {
   margin: 0;
   padding-bottom: 62px;
+
+  @media (min-width: @tablet) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop) {
+    flex-direction: column;
+  }
 }
 
 .detailed__item {
   display: flex;
+
   font-size: 14px;
   line-height: 30px;
   color: @black-medium;
+
+  @media (min-width: @tablet) {
+    margin-right: 30px;
+  }
 }
 
 .detailed__name {
