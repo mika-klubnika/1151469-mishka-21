@@ -73,10 +73,14 @@
 .wrapper-title {
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 177px;
+  min-height: 158px;
+  padding-top: 73px;
 
   background-color: @white-dark;
+
+  @media (min-width: @tablet) {
+    padding-top: 30px;
+  }
 }
 
 .button {
@@ -84,7 +88,7 @@
   justify-content: center;
   align-items: center;
 
-  min-width: @element-width;
+  min-width: @mobile-content-width;
   min-height: 52px;
 
   font-weight: bold;
@@ -97,8 +101,6 @@
 }
 
 .form-fieldset {
-  padding: 0;
-  margin: 0;
   border: none;
 }
 
