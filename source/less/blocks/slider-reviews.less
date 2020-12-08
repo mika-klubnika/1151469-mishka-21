@@ -1,11 +1,14 @@
 .slider-reviews {
   position: relative;
-  padding-top: 30px;
+  padding-top: 20px;
   padding-bottom: 30px;
 
   @media (min-width: @tablet) {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 83px;
+    padding-bottom: 45px;
+
     background-image: url("../img/review.png");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -13,50 +16,101 @@
 
   @media (min-width: @desktop) {
     min-height: 457px;
-    padding-left: @desktop-container-indent;
-    margin-bottom: 80px;
+    padding-top: 80px;
+    padding-left: 225px;
+    background-position: 50px 0;
   }
 }
 
 .slider-reviews__title {
+  height: min-content;
   margin-bottom: 14px;
 
   @media (min-width: @tablet) {
     order: -2;
     margin-bottom: 38px;
+    margin-right: 80px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 35px;
+  }
+}
+
+.slider-reviews__list {
+  @media (min-width: @desktop) {
+    margin-top: -18px;
   }
 }
 
 .slider-reviews__item {
   display: none;
-  margin-bottom: 30px;
-}
+  margin-bottom: 40px;
 
-.slider-reviews__item--active {
-  display: block;
+  &--active {
+    display: block;
+  }
 }
 
 .slider-reviews__text {
-  margin-bottom: 33px;
+  margin-bottom: 25px;
 
   line-height: 30px;
   color: @black-medium;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 55px;
+    font-size: 17px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 30px;
+  }
+}
+
+.slider-reviews__br {
+  &--tablet {
+    display: none;
+
+    @media (min-width: @tablet) {
+      display: block;
+    }
+
+    @media (min-width: @desktop) {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @media (min-width: @desktop) {
+      display: block;
+    }
+  }
 }
 
 .slider-reviews__author {
   display: flex;
   flex-direction: column;
+  padding-top: 10px;
 
+  font-size: 17px;
   font-style: normal;
 }
 
-.slider-reviews__wrapper {
+.slider-reviews__inner {
   display: flex;
 
   @media (min-width: @tablet) {
     position: absolute;
-    bottom: 63px;
-    right: 0;
+    bottom: 76px;
+    right: 50px;
+  }
+
+  @media (min-width: @desktop) {
+    bottom: 95px;
+    right: 52px;
   }
 }
 
@@ -64,8 +118,23 @@
   width: 130px;
   height: 52px;
 
+  color: @black;
   background-color: transparent;
   border: @border-gray;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet) {
+    width: 88px;
+    border: none;
+  }
 }
 
 .slider-reviews__link {
@@ -73,7 +142,7 @@
 
   @media (min-width: @tablet) {
     order: -1;
-    width: @desktop-container-indent;
+    width: 175px;
     height: 52px;
     margin: 0;
     margin-left: auto;

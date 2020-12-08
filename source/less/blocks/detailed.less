@@ -4,10 +4,13 @@
 
   @media (min-width: @tablet) {
     display: flex;
+    margin-top: 22px;
+    padding-bottom: 47px;
   }
 
   @media (min-width: @desktop) {
     flex-direction: column;
+    padding-bottom: 62px;
   }
 }
 
@@ -18,8 +21,23 @@
   line-height: 30px;
   color: @black-medium;
 
+  &:first-child {
+    margin-bottom: 30px;
+  }
+
   @media (min-width: @tablet) {
-    margin-right: 30px;
+    font-size: 17px;
+
+    &:first-child {
+      margin-right: 53px;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    &:first-child {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -33,4 +51,17 @@
 
 .detailed__description address {
   font-style: normal;
+}
+
+.detailed__link {
+  border-bottom: 1px solid @green-light;
+
+  &:hover,
+  &:focus {
+    color: @green-light;
+  }
+
+  &:active {
+    border-bottom: 1px solid @green-light-opacity-01;
+  }
 }

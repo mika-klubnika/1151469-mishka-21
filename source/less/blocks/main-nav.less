@@ -1,18 +1,83 @@
 .main-nav {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 
   @media (min-width: @tablet) {
     flex-direction: row;
+    padding: 0 50px;
   }
 
   @media (min-width: @desktop) {
     justify-content: space-between;
+    width: @desktop;
+    margin: 0 auto;
   }
 }
 
 .main-nav__toggle {
+  position: absolute;
+  top: -60px;
+  right: 20px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+
+  @media (min-width: @tablet) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 10px;
+  width: 20px;
+  height: 2px;
+  background-color: @black;
+  box-shadow: 0 6px 0 0 @black, 0 12px 0 0 @black;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade(@black, 30%);
+  box-shadow:
+    0 6px 0 0 fade(@black, 30%),
+    0 12px 0 0 fade(@black, 30%);
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    width: 30px;
+    height: 2px;
+    background-color: @black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__item {
+    display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
   display: none;
 }
 
@@ -26,7 +91,9 @@
 }
 
 .main-nav__list--site {
-  order: 2;
+  @media (min-width: @tablet) {
+    order: 2;
+  }
 
   & > .main-nav__item:last-child {
     border: none;
@@ -34,8 +101,9 @@
 
   @media (min-width: @tablet) {
     & > .main-nav__item {
-      min-width: 167px;
-      padding: 0;
+      width: 167px;
+      padding-left: 0;
+      padding-right: 20px;
     }
   }
 
@@ -43,7 +111,12 @@
     order: 0;
 
     & > .main-nav__item {
-      min-width: 220px;
+      width: 187px;
+
+      &:first-of-type {
+        border-right: 1px solid #ececec;
+        margin-right: 33px;
+      }
     }
   }
 }
@@ -67,23 +140,37 @@
     display: flex;
 
     & > .main-nav__item {
-      min-width: 220px;
-      padding: 0;
+      width: 220px;
+      padding-right: 20px;
+      padding-left: 0;
     }
   }
 }
 
 .main-nav__item {
+  position: relative;
   display: flex;
   align-items: center;
 
-  min-height: 79px;
-  padding-left: 76px;
+  min-height: 80px;
+  height: fit-content;
+  padding-left: 75px;
 
   border-bottom: @border-gray;
 
+  &:first-child {
+    border-top: @border-gray;
+  }
+
   @media (min-width: @tablet) {
+    min-height: 75px;
     border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &:first-child {
+      border-top: none;
+    }
   }
 }
 
@@ -91,13 +178,51 @@
   border-top: @border-gray;
 
   @media (min-width: @tablet) {
+    width: 82px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
     border: none;
+    border-right: @border-gray;
+    border-left: @border-gray;
+  }
+}
+
+.main-nav__item--cart {
+  @media (min-width: @tablet) {
+    padding-left: 85px;
   }
 }
 
 .main-nav__link {
+  position: relative;
   font-weight: bold;
   font-size: 17px;
+
+  svg {
+    position: absolute;
+    opacity: 0.2;
+  }
+
+  &:hover,
+  &:focus {
+    color: @black-opacity-06;
+  }
+
+  &:active {
+    color: @black-opacity-03;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    color: @green;
+    opacity: 1;
+  }
+
+  &:active svg {
+    color: @green;
+  }
 }
 
 .main-nav__link--site {
@@ -117,19 +242,38 @@
 }
 
 .main-nav__link--search {
+  svg {
+    top: 0;
+    left: -45px;
+  }
+
   &::before {
     content: attr(aria-label);
   }
 
   @media (min-width: @tablet) {
-    width: 82px;
-    height: 100%;
-    border-right: @border-gray;
-    border-left: @border-gray;
-
     &::before {
       content: "";
     }
+
+    svg {
+      top: -11px;
+      left: 20px;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    svg {
+      top: -10px;
+      left: 22px;
+    }
+  }
+}
+
+.main-nav__link--cart {
+  svg {
+    left: -50px;
+    top: 0;
   }
 }
 
@@ -143,6 +287,7 @@
     align-items: center;
     order: 3;
     margin-left: auto;
+    padding-left: 20px;
 
     &::before {
       content: attr(aria-label);
