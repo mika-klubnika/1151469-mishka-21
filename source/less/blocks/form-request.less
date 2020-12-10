@@ -1,14 +1,14 @@
 .form-request {
-  padding-top: 18px;
-  padding-bottom: 28px;
+  padding-bottom: 17px;
+
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
 
   @media (min-width: @tablet) {
+    padding-bottom: 12px;
     font-size: 19px;
     line-height: 18px;
-    padding-top: 30px;
   }
 }
 
@@ -21,31 +21,20 @@
   color: @black-medium;
 
   @media (min-width: @tablet) {
-    font-size: 17px;
-    line-height: 30px;
     padding-top: 66px;
     padding-bottom: 30px;
+
+    font-size: 17px;
+    line-height: 30px;
   }
 }
 
 .form-request__item {
-  &--checkbox {
-    padding-top: 40px;
-    padding-bottom: 10px;
-  }
-
   &:not(:last-of-type) {
-    margin-bottom: 43px;
+    margin-bottom: 15px;
   }
 
   @media (min-width: @tablet) {
-    &--contacts {
-      display: flex;
-      flex-direction: column;
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
-
     &:nth-of-type(2n) {
       background-color: @white-dark;
     }
@@ -53,33 +42,82 @@
 }
 
 .form-request__title {
-  margin-bottom: 25px;
+  margin-bottom: 35px;
+
+  font-weight: bold;
+  font-size: 17px;
   line-height: 16px;
   text-transform: uppercase;
   color: @green;
 
+  &--full-name {
+    margin-bottom: 30px;
+  }
+
   @media (min-width: @tablet) {
-    position: absolute;
+    margin-right: 128px;
+    margin-top: 15px;
+
+    &--radio {
+      margin-top: 0;
+    }
+
+    &--email {
+      width: 85px;
+      margin-right: 99px;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    margin-right: 75px;
+    margin-bottom: 0;
+
+    &--email {
+      margin-right: 43px;
+    }
+
+    &--checkbox {
+      margin-top: 10px;
+    }
+
+    &--indent-top {
+      margin-top: 15px;
+    }
   }
 }
 
 .form-request__subitem {
   position: relative;
-  margin-bottom: 65px;
   padding-left: 60px;
 
-  &::before {
+  @media (min-width: @tablet) {
+    padding-left: 80px;
+
+    &::before {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+.form-request__checked {
+  & + label::before {
     content: "";
     position: absolute;
-    width: 52px;
-    height: 52px;
-    border: 1px solid @black;
+    width: 50px;
+    height: 50px;
+    border: 2px solid @black;
+  }
+
+  &:checked + label::after {
+    content: "";
+    position: absolute;
   }
 }
 
 .form-request__label {
   &:not(:last-child) > .form-request__input {
-    margin-bottom: 22px;
+    margin-bottom: 25px;
   }
 
   @media (min-width: @tablet) {
@@ -87,18 +125,19 @@
     align-items: baseline;
 
     .form-request__input {
-      margin-left: 22px;
+      margin-left: 27px;
     }
   }
 }
 
 .form-request__input {
-  height: 52px;
-  border: none;
-  border-bottom: 1px solid @black;
+  width: 100%;
+  height: 50px;
+  border: 2px solid transparent;
+  border-bottom: 2px solid @black;
 
   &:not(:last-child) {
-    margin-bottom: 35px;
+    margin-bottom: 57px;
   }
 
   @media (min-width: @tablet) {
@@ -110,24 +149,37 @@
 }
 
 .form-request__textarea {
-  height: 142px;
-  margin-bottom: 17px;
+  width: 100%;
+  min-height: 142px;
+  margin-bottom: 5px;
+  margin-top: 20px;
+  border: 2px solid @black;
   resize: none;
 
   @media (min-width: @tablet) {
-    width: 420px;
+    margin-bottom: 17px;
   }
 }
 
 .form-request__field {
-  width: 100%;
-  padding: 17px;
+  padding-top: 10px;
   background-color: transparent;
 
   &::placeholder {
     font-size: 17px;
     line-height: 18px;
     color: @black-opacity-03;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 2px solid @green-light;
+    outline: none;
+  }
+
+  @media (min-width: @tablet) {
+    padding: 17px;
   }
 }
 
@@ -138,18 +190,123 @@
   }
 }
 
-.form-request__wrap-indent {
+.form-request__wrap-subclause {
   @media (min-width: @tablet) {
-    padding-left: 140px;
+    display: flex;
 
     &--last-element {
-      padding-left: 0;
+      padding-top: 5px;
     }
   }
 
   @media (min-width: @desktop) {
-    padding-left: @desktop-container-indent;
-    padding-right: @desktop-container-indent;
+    padding-left: 110px;
+    padding-right: 225px;
+
+    &--last-element {
+      padding-left: 176px;
+      padding-right: 175px;
+    }
+  }
+}
+
+.form-request__wrap-subclause--type {
+  padding-top: 13px;
+  padding-bottom: 20px;
+
+  @media (min-width: @tablet) {
+    padding-top: 45px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 58px;
+    padding-bottom: 50px;
+  }
+}
+
+.form-request__wrap-subclause--color {
+  padding-top: 8px;
+
+  @media (min-width: @tablet) {
+    padding-top: 55px;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-right: 200px;
+    padding-top: 58px;
+    padding-bottom: 15px;
+  }
+}
+
+.form-request__wrap-subclause--full-name {
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  @media (min-width: @tablet) {
+    padding-top: 39px;
+    padding-bottom: 35px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 38px;
+    padding-bottom: 35px;
+  }
+}
+
+.form-request__wrap-subclause--information {
+  padding-top: 5px;
+
+  @media (min-width: @tablet) {
+    padding-top: 37px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 40px;
+  }
+}
+
+.form-request__wrap-subclause--contacts {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 15px;
+
+
+  @media (min-width: @tablet) {
+    padding-top: 50px;
+    padding-bottom: 23px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.form-request__inner-full-name {
+  width: 100%;
+}
+
+.form-request__inner-contacts {
+  &:not(:last-child) {
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: @tablet) {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    &:not(:last-child) {
+      margin-bottom: 27px;
+    }
   }
 }
 
@@ -163,15 +320,22 @@
     display: flex;
     align-items: center;
     order: 2;
+    font-size: 17px;
+    line-height: 30px;
   }
 }
 
 .form-request__button {
   margin-top: 30px;
-  margin-bottom: 28px;
+  margin-bottom: 35px;
   background-color: transparent;
 
   @media (min-width: @tablet) {
-    min-width: 230px;
+    margin-top: 35px;
+    width: 230px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-top: 25px;
   }
 }
