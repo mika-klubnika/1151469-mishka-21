@@ -1,11 +1,14 @@
 .content {
   position: relative;
+
   background-color: @white-darker;
   background-image: url("../img/hero-mobile.png");
   background-repeat: no-repeat;
   background-position: 50% 0;
 
   @media (min-width: @tablet) {
+    background-size: 618px 556px;
+
     &::after {
       content: "";
       position: absolute;
@@ -16,8 +19,6 @@
       background-repeat: repeat-x;
       background-size: contain;
     }
-
-    background-size: 618px 556px;
   }
 
   @media (min-width: @desktop) {
@@ -30,6 +31,7 @@
 .content__wrapper {
   display: flex;
   flex-direction: column;
+
   min-height: 486px;
   max-width: @desktop;
   margin: 0 auto;
@@ -80,10 +82,13 @@
 }
 
 .content__link {
+  --height-content-link: 103px;
+
   display: flex;
   justify-content: space-between;
+
   min-width: 50%;
-  min-height: 103px;
+  min-height: var(--height-content-link);
   padding: 20px 30px;
 
   font-weight: bold;
@@ -100,7 +105,8 @@
   }
 
   &:hover {
-    height: 140px;
+    min-height: calc(var(--height-content-link) + 5px);
+    margin-top: -6px;
   }
 
   &:hover svg,
@@ -113,12 +119,16 @@
   }
 
   @media (min-width: @tablet) {
-    min-height: 123px;
+    --height-content-link: 123px;
+
+    min-height: var(--height-content-link);
     padding-left: 40px;
     padding-top: 30px;
   }
 
   @media (min-width: @desktop) {
-    min-height: 134px;
+    --height-content-link: 134px;
+
+    min-height: var(--height-content-link);
   }
 }
