@@ -25,6 +25,10 @@
   height: min-content;
   color: @black;
 
+  @media (min-width: @tablet) {
+    display: flex;
+  }
+
   &[href]:hover,
   &[href]:focus {
     color: @green-img;
@@ -32,9 +36,5 @@
 
   &[href]:active {
     opacity: 0.3;
-  }
-
-  @media (min-width: @tablet) {
-    display: flex;
   }
 }

@@ -102,6 +102,10 @@
   border: 2px solid @black-medium-opacity-01;
   outline: none;
 
+  @media (min-width: @tablet) {
+    width: 112px;
+  }
+
   &:hover {
     border: 2px solid @black-medium-opacity-03;
   }
@@ -109,10 +113,6 @@
   &:focus,
   &:active {
     border: 2px solid @green;
-  }
-
-  @media (min-width: @tablet) {
-    width: 112px;
   }
 }
 

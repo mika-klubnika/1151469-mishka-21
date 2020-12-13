@@ -104,6 +104,16 @@
     opacity: 0.5;
   }
 
+  @media (min-width: @tablet) {
+    --height-content-link: 123px;
+    padding-left: 40px;
+    padding-top: 30px;
+  }
+
+  @media (min-width: @desktop) {
+    --height-content-link: 134px;
+  }
+
   &:hover {
     min-height: calc(var(--height-content-link) + 5px);
     margin-top: -6px;
@@ -116,19 +126,5 @@
 
   &:active svg {
     opacity: 0.3;
-  }
-
-  @media (min-width: @tablet) {
-    --height-content-link: 123px;
-
-    min-height: var(--height-content-link);
-    padding-left: 40px;
-    padding-top: 30px;
-  }
-
-  @media (min-width: @desktop) {
-    --height-content-link: 134px;
-
-    min-height: var(--height-content-link);
   }
 }
