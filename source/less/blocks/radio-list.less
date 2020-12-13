@@ -1,6 +1,6 @@
 .radio-list__item {
   &:not(:last-child) {
-    margin-bottom: 24px;
+    margin-bottom: 26px;
   }
 
   @media (min-width: @tablet) {
@@ -13,15 +13,15 @@
 .radio-list__checked {
   & + label::before {
     top: -8px;
-    left: 0;
+    left: -2px;
     border-radius: 50%;
   }
 
   &:checked + label::after {
-    top: -2px;
-    left: 15px;
-    width: 20px;
-    height: 20px;
+    top: 4px;
+    left: 11px;
+    width: 15px;
+    height: 15px;
     background-color: @green-light;
     border-radius: 50%;
   }
@@ -53,6 +53,14 @@
   @media (min-width: @tablet) {
     & + label::before {
       top: -17px;
+      left: -0;
+    }
+
+    &:checked + label::after {
+      top: -2px;
+      left: 15px;
+      width: 20px;
+      height: 20px;
     }
   }
 }
