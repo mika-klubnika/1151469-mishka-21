@@ -8,28 +8,112 @@
 .checkbox-list__item {
   height: 38px;
 
-  &::before {
-    top: -10px;
-    left: 0;
+  &:not(:last-child) {
+    margin-bottom: 23px;
   }
 
   @media (min-width: @tablet) {
     display: flex;
     align-items: center;
-    width: 190px;
+    width: 210px;
+    margin-bottom: 35px;
 
     &:not(:nth-child(2n)) {
-      margin-right: 109px;
+      margin-right: 48px;
+    }
 
-      @media (min-width: @desktop) {
-        margin-right: 0;
-      }
+    &:not(:last-child) {
+      margin-bottom: 38px;
+    }
+  }
+
+  @media (min-width: 989px) {
+    width: 215px;
+
+    &:not(:nth-child(2n)) {
+      margin-right: 120px;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    width: 180px;
+
+    &:nth-child(-n+3) {
+      margin-bottom: 40px;
+    }
+
+    &:not(:nth-child(2n)) {
+      margin-right: 0;
     }
 
     &:not(:nth-child(3n)) {
-      @media (min-width: @desktop) {
-        margin-right: 70px;
-      }
+      margin-right: 77px;
+    }
+  }
+}
+
+.checkbox-list__checked {
+  & + label::before {
+    top: -14px;
+    left: -3px;
+  }
+
+  &:checked + label::after {
+    top: -8px;
+    left: 11px;
+    width: 12px;
+    height: 22px;
+    border-bottom: 2px solid @black;
+    border-right: 2px solid @black;
+    transform: rotate(45deg);
+  }
+
+  &:disabled + label::before {
+    border: 2px solid gray;
+    cursor: default;
+  }
+
+  &:checked:disabled + label::after {
+    border-bottom: 2px solid gray;
+    border-right: 2px solid gray;
+    cursor: default;
+  }
+
+  &:not(:disabled):hover + label::before {
+    border: 2px solid @green-light;
+  }
+
+  &:not(:disabled):active + label::before,
+  &:not(:disabled):focus + label::before {
+    border: 2px solid @black-medium-opacity-03;
+  }
+
+  @media (min-width: @tablet) {
+    & + label::before {
+      top: -4px;
+      left: -2px;
+    }
+
+    &:checked + label::after {
+      top: 1px;
+      left: 16px;
+      width: 16px;
+      height: 29px;
+      border-bottom: 2px solid @black;
+      border-right: 2px solid @black;
+      transform: rotate(45deg);
+    }
+  }
+
+  @media (min-width: @desktop) {
+    & + label::before {
+      top: -10px;
+      left: -1px;
+    }
+
+    &:checked + label::after {
+      top: -5px;
+      left: 17px;
     }
   }
 }

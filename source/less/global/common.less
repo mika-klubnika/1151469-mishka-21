@@ -55,6 +55,10 @@
   font-size: 25px;
   line-height: 30px;
 
+  &--the-main-for-the-other-pages {
+    font-size: 27px;
+  }
+
   @media (min-width: @tablet) {
     font-size: 43px;
     line-height: 50px;
@@ -67,15 +71,36 @@
 }
 
 .wrapper-title {
+  position: relative;
   display: flex;
   justify-content: center;
-  min-height: 158px;
+  min-height: 175px;
   padding-top: 73px;
 
   background-color: @white-dark;
 
   @media (min-width: @tablet) {
+    min-height: 160px;
     padding-top: 30px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      width: 100%;
+      height: 20px;
+      background-image: url("../img/zigzag-fill-desktop.png");
+      background-repeat: repeat-x;
+      background-size: contain;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    min-height: 200px;
+
+    &::after {
+      height: 34px;
+    }
   }
 }
 
@@ -107,6 +132,8 @@
 }
 
 .form-fieldset {
+  padding: 0;
+  margin: 0;
   border: none;
 }
 
