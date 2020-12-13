@@ -152,10 +152,6 @@
   border: 2px solid transparent;
   border-bottom: 2px solid @black;
 
-  &:not(:last-child) {
-    margin-bottom: 57px;
-  }
-
   @media (min-width: @tablet) {
     &--contacts {
       padding-top: 40px;
@@ -171,8 +167,16 @@
 .form-request__textarea {
   width: 100%;
   min-height: 142px;
+  padding: 10px;
   border: 2px solid @black;
   resize: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 2px solid @green-light;
+    outline: none;
+  }
 }
 
 .form-request__field {
@@ -188,8 +192,16 @@
   &:hover,
   &:focus,
   &:active {
-    border: 2px solid @green-light;
+    border-bottom: 2px solid @green-light;
     outline: none;
+  }
+
+  + svg {
+    color: @black-opacity-02;
+  }
+
+  &:hover + svg {
+    color: @green-light;
   }
 
   @media (min-width: @tablet) {
@@ -209,10 +221,13 @@
 }
 
 .form-request__wrap-subclause {
-  @media (min-width: @tablet) {
   &--contacts {
     display: flex;
     flex-direction: column;
+  }
+
+  @media (min-width: @tablet) {
+    display: flex;
   }
 
   @media (min-width: @desktop) {
@@ -240,11 +255,15 @@
   svg {
     position: absolute;
     right: 10px;
-    top: 11px;
+    bottom: 15px;
   }
 
   @media (min-width: @tablet) {
     display: flex;
+
+    svg {
+      bottom: 25px;
+    }
 
     &:not(:last-child) {
       margin-bottom: 10px;
