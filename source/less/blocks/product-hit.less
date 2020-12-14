@@ -1,17 +1,22 @@
 .product-hit {
-  position: relative;
   min-height: 795px;
   padding-top: 31px;
-  padding-bottom: 36px;
+  padding-bottom: 20px;
 
   @media (min-width: @tablet) {
     min-height: 550px;
+    padding-top: 48px;
+    padding-bottom: 36px;
   }
 
   @media (min-width: @desktop) {
     min-height: 732px;
-    padding-top: 54px;
+    padding-top: 69px;
   }
+}
+
+.product-hit__wrapper {
+  position: relative;
 }
 
 .product-hit__title-wrapper {
@@ -25,7 +30,7 @@
     z-index: 1;
     justify-content: flex-start;
     padding-top: 50px;
-    padding-bottom: 18px;
+    padding-bottom: 10px;
   }
 }
 
@@ -45,12 +50,13 @@
   color: @green;
 
   @media (min-width: @tablet) {
-    padding-right: 29px;
+    padding-right: 25px;
     text-align: center;
   }
 
   @media (min-width: @desktop) {
-    padding-right: 100px;
+    padding-right: 55px;
+    padding-left: 48px;
   }
 
   br {
@@ -65,38 +71,46 @@
 .product-hit__text-wrapper {
   @media (min-width: @tablet) {
     width: 292px;
+    margin-top: 35px;
   }
 
   @media (min-width: @desktop) {
     margin-left: @desktop-container-indent;
-    padding-top: 17px;
+    margin-top: 0;
+    padding-top: 10px;
   }
 }
 
 .product-hit__text {
-  margin-top: 17px;
+  margin-top: 14px;
   margin-bottom: 28px;
   color: @black-medium;
+
+  @media (min-width: @tablet) {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .product-hit-img {
   display: flex;
   margin: 0 auto;
   padding-top: 28px;
-  padding-bottom: 25px;
+  padding-bottom: 27px;
 
   @media (min-width: @tablet) {
     position: absolute;
-    right: 0;
-    top: 73px;
-    width: 324px;
-    height: 424px;
+    top: 70px;
+    right: 54px;
+    width: 334px;
+    height: 457px;
   }
 
   @media (min-width: @desktop) {
-    top: 25px;
+    top: -38px;
+    right: 50px;
     width: 525px;
-    height: 636px;
+    height: 690px;
     z-index: -1;
   }
 }
@@ -109,9 +123,26 @@
   font-size: 17px;
   line-height: 24px;
   color: @black-medium;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 55px;
+  }
 }
 
 .product-hit__link {
   padding: 5px 10px;
   margin-top: 25px;
+
+  @media (min-width: @tablet) {
+    margin-top: 34px;
+    width: 292px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-top: 30px;
+  }
 }

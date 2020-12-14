@@ -1,12 +1,50 @@
 .contacts {
   position: relative;
-  padding-top: 38px;
-  padding-bottom: 30px;
+  padding-top: 60px;
+  padding-bottom: 35px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    width: 100%;
+    height: 6px;
+    background-image: url("../img/zigzag-line-desktop.svg");
+    background-size: contain;
+    background-repeat: repeat-x;
+  }
+
+  @media (min-width: @tablet) {
+    padding-top: 80px;
+    padding-bottom: 55px;
+
+    &::before {
+      top: 35px;
+      height: 17px;
+    }
+  }
 
   @media (min-width: @desktop) {
     display: flex;
-    padding-left: @desktop-container-indent;
-    padding-top: 80px;
+    padding-top: 160px;
+    padding-bottom: 50px;
+
+    &::before {
+      top: 68px;
+      height: 23px;
+    }
+  }
+}
+
+.contacts__wrapper {
+  position: relative;
+  display: block;
+  padding: 0;
+  margin: 0 auto;
+
+  @media (min-width: @desktop) {
+    display: flex;
+    padding: 0 50px;
   }
 }
 
@@ -21,25 +59,62 @@
     font-size: 43px;
     line-height: 50px;
   }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 15px;
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
-.contacts__wrapper {
+.contacts__inner {
+  position: relative;
   display: flex;
   flex-direction: column;
+  padding: 0 30px;
+
+  @media (min-width: @tablet) {
+    padding: 45px 50px 0 50px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 80px 53px 0 170px;
+  }
+}
+
+.contacts__svg {
+  display: none;
+
+  @media (min-width: @tablet) {
+    position: absolute;
+    display: flex;
+    top: 20px;
+    right: 53px;
+  }
+
+  @media (min-width: @desktop) {
+    top: 63px;
+    left: 60px;
+  }
 }
 
 .contacts__map {
+  position: relative;
   display: flex;
   width: @mobile;
   padding-bottom: 40px;
 
+  iframe {
+    border: none;
+  }
+
   @media (min-width: @tablet) {
     width: @tablet;
-    height: 457px;
+    padding-bottom: 55px;
+  }
 
-    & img {
-      width: 100%;
-    }
+  @media (min-width: @desktop) {
+    width: 527px;
   }
 }
 
@@ -48,13 +123,12 @@
   margin: 0 auto;
 
   @media (min-width: @tablet) {
-    min-width: 230px;
-    max-width: 260px;
+    width: 230px;
   }
 
   @media (min-width: @desktop) {
     position: absolute;
-    bottom: 70px;
-    left: 177px;
+    bottom: 55px;
+    left: 220px;
   }
 }
