@@ -137,14 +137,14 @@
 
         <div class="about-us__list-wrapper">
           <ul class="about-us__list list">
-            <li class="about-us__item about-us__item--1">Экологически<br> чистые материалы</li>
-            <li class="about-us__item about-us__item--2">Скандинавский стиль<br> по российской цене</li>
-            <li class="about-us__item about-us__item--3">Увеличивает лайки<br> на фотографиях</li>
+            <li class="about-us__item about-us__item--materials">Экологически<br> чистые материалы</li>
+            <li class="about-us__item about-us__item--style">Скандинавский стиль<br> по российской цене</li>
+            <li class="about-us__item about-us__item--popular">Увеличивает лайки<br> на фотографиях</li>
           </ul>
           <ul class="about-us__list list">
-            <li class="about-us__item about-us__item--4">Связано вручную<br> с любовью и умилением</li>
-            <li class="about-us__item about-us__item--5">Поддержка отечественного<br> производителя</li>
-            <li class="about-us__item about-us__item--6">Поставляется<br> в подарочной упаковке</li>
+            <li class="about-us__item about-us__item--manually">Связано вручную<br> с любовью и умилением</li>
+            <li class="about-us__item about-us__item--manufacturer">Поддержка отечественного<br> производителя</li>
+            <li class="about-us__item about-us__item--supply">Поставляется<br> в подарочной упаковке</li>
           </ul>
         </div>
       </div>
@@ -186,12 +186,12 @@
       </ul>
 
       <div class="slider-reviews__inner">
-        <button class="slider-reviews__button" type="button" aria-label="Предыдущий">
+        <button class="slider-reviews__button slider-reviews__button--previous" type="button" aria-label="Предыдущий">
           <svg width="50" height="26" viewBox="0 0 50 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M50 11H7.7L15.8 2.8L13 0L0 13L13 26L15.8 23.2L7.7 15H50V11Z" fill="currentcolor" />
           </svg>
         </button>
-        <button class="slider-reviews__button" type="button" aria-label="Следующий">
+        <button class="slider-reviews__button slider-reviews__button--next" type="button" aria-label="Следующий">
           <svg width="50" height="26" viewBox="0 0 50 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 11H42.3L34.2 2.8L37 0L50 13L37 26L34.2 23.2L42.3 15H0V11Z" fill="currentcolor" />
           </svg>
@@ -309,14 +309,27 @@
   </footer>
 
   <section class="modal">
-    <h3 class="modal__title text">Добавить в корзину</h3>
-    <p class="modal__text text">Выберите размер:</p>
-    <div class="modal__wrapper">
-      <button class="modal__size">S</button>
-      <button class="modal__size">M</button>
-      <button class="modal__size">L</button>
+    <div class="modal__base">
+      <form class="modal__form-wrapper" method="get" action="https://echo.htmlacademy.ru">
+        <h3 class="modal__title text">Добавить в корзину</h3>
+        <p class="modal__text">Выберите размер:</p>
+          <ul class="modal__list list">
+            <li class="modal__item">
+              <input class="modal__size-input visually-hidden" type="radio" name="size" value="S" id="size-S" checked>
+              <label class="modal__size-label" for="size-S">S</label>
+            </li>
+            <li class="modal__item">
+              <input class="modal__size-input visually-hidden" type="radio" name="size" value="M" id="size-M">
+              <label class="modal__size-label" for="size-M">M</label>
+            </li>
+            <li class="modal__item">
+              <input class="modal__size-input visually-hidden" type="radio" name="size" value="L" id="size-L">
+              <label class="modal__size-label" for="size-L">L</label>
+              </li>
+          </ul>
+        <button class="modal__button">Добавить</button>
+      </form>
     </div>
-    <button class="modal__button">Добавить</button>
   </section>
 
   <button class="up-button" type="button">
