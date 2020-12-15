@@ -70,17 +70,17 @@
 
       <form class="form-request" method="post" action="https://echo.htmlacademy.ru">
 
-        <fieldset class="form-request__item form-fieldset">
+        <fieldset class="form-request__item form-request__item--type form-fieldset">
           <legend class="visually-hidden">Выбор товара по типу</legend>
           <div class="form-request__wrap-subclause container">
             <h3 class="form-request__title text">Тип</h3>
             <ul class="form-request__list radio-list list">
-              <li class="form-request__subitem radio-list__item">
-                <input class="visually-hidden form-request__checked radio-list__checked" type="radio" name="type-of-knitting" value="accessory" id="accessory" checked>
+              <li class="form-request__subitem form-request__subitem--radio radio-list__item">
+                <input class="visually-hidden" type="radio" name="type-of-knitting" value="accessory" id="accessory" checked>
                 <label for="accessory">Аксессуар для интерьера</label>
               </li>
-              <li class="form-request__subitem radio-list__item">
-                <input class="visually-hidden form-request__checked radio-list__checked" type="radio" name="type-of-knitting" value="toy" id="toy">
+              <li class="form-request__subitem form-request__subitem--radio radio-list__item">
+                <input class="visually-hidden" type="radio" name="type-of-knitting" value="toy" id="toy">
                 <label for="toy">Детская игрушка</label>
               </li>
             </ul>
@@ -89,31 +89,31 @@
 
         <fieldset class="form-request__item form-request__item--color form-fieldset">
           <legend class="visually-hidden">Выбор товара по цвету</legend>
-          <div class="form-request__wrap-subclause container">
+          <div class="form-request__wrap-subclause form-request__wrap-subclause--color container">
             <h3 class="form-request__title form-request__title--checkbox text">Цвет</h3>
             <ul class="form-request__list checkbox-list list">
               <li class="form-request__subitem checkbox-list__item">
-                <input class="visually-hidden form-request__checked checkbox-list__checked" type="checkbox" name="white" id="white" checked disabled>
+                <input class="visually-hidden" type="checkbox" name="white" id="white" checked disabled>
                 <label for="white">Белый</label>
               </li>
               <li class="form-request__subitem checkbox-list__item">
-                <input class="visually-hidden form-request__checked checkbox-list__checked" type="checkbox" name="gray" id="gray" checked>
+                <input class="visually-hidden" type="checkbox" name="gray" id="gray" checked>
                 <label for="gray">Серый</label>
               </li>
               <li class="form-request__subitem checkbox-list__item">
-                <input class="visually-hidden form-request__checked checkbox-list__checked" type="checkbox" name="tiffany" id="tiffany">
+                <input class="visually-hidden" type="checkbox" name="tiffany" id="tiffany">
                 <label for="tiffany">«Тиффани»</label>
               </li>
               <li class="form-request__subitem checkbox-list__item">
-                <input class="visually-hidden form-request__checked checkbox-list__checked" type="checkbox" name="black" id="black">
+                <input class="visually-hidden" type="checkbox" name="black" id="black">
                 <label for="black">Черный</label>
               </li>
               <li class="form-request__subitem checkbox-list__item">
-                <input class="visually-hidden form-request__checked checkbox-list__checked" type="checkbox" name="pink" id="pink">
+                <input class="visually-hidden" type="checkbox" name="pink" id="pink">
                 <label for="pink">Розовый</label>
               </li>
               <li class="form-request__subitem checkbox-list__item">
-                <input class="visually-hidden form-request__checked checkbox-list__checked" type="checkbox" name="orange" id="orange" disabled>
+                <input class="visually-hidden" type="checkbox" name="orange" id="orange" disabled>
                 <label for="orange">Оранжевый</label>
               </li>
             </ul>
