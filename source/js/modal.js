@@ -3,7 +3,8 @@ var modal = document.querySelector(".modal");
 var emptyField = document.querySelector(".modal__base");
 
 for (var button of buttons) {
-  button.onclick = function () {
+  button.onclick = function (evt) {
+    evt.preventDefault();
     modal.classList.add("modal__show");
   }
 }

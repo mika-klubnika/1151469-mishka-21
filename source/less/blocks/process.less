@@ -1,10 +1,11 @@
 .process {
   display: grid;
-  margin-top: 10px;
-  margin-bottom: 73px;
+  margin-top: 5px;
+  margin-bottom: 60px;
 }
 
 .process__wrapper {
+  position: relative;
   display: grid;
   grid-template-columns: 260px;
   grid-template-rows: min-content min-content min-content min-content;
@@ -27,6 +28,15 @@
     grid-template-rows: min-content min-content auto;
     column-gap: 80px;
     min-height: 455px;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: @catalog-item-shadow-hover;
+  }
+
+  &:active {
+    box-shadow: @catalog-item-shadow-active;
   }
 }
 
@@ -92,6 +102,33 @@
     grid-row-end: 4;
     width: 680px;
     height: 455px;
+  }
+}
+
+.process__svg {
+  position: absolute;
+  top: 130px;
+  left: 80px;
+  transition: 0.3s; // почему оно со мной так поступает? (tablet <-> mobile)
+
+  @media (min-width: @tablet) {
+    top: 188px;
+    left: 290px;
+  }
+
+  @media (min-width: @desktop) {
+    top: 188px;
+    left: 290px;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(0.8);
+    opacity: 0.3;
   }
 }
 
