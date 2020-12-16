@@ -7,10 +7,9 @@ for (var button of buttons) {
     evt.preventDefault();
     modal.classList.add("modal__show");
   }
-}
+};
 
-emptyField.addEventListener("click", function (evt) {
-  evt.preventDefault();
+emptyField.addEventListener("click", function () {
   modal.classList.remove("modal__show");
 });
 

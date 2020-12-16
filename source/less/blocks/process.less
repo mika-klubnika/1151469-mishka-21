@@ -2,7 +2,6 @@
   display: grid;
   margin-top: 5px;
   margin-bottom: 60px;
-  background-color: red;
 }
 
 .process__wrapper {
@@ -108,18 +107,11 @@
 
 .process__svg {
   position: absolute;
-  top: 130px;
-  left: 80px;
+  .position (130px, 80px);
   transition: transform 0.3s;
 
   @media (min-width: @tablet) {
-    top: 188px;
-    left: 290px;
-  }
-
-  @media (min-width: @desktop) {
-    top: 188px;
-    left: 290px;
+    .position (188px, 290px);
   }
 
   &:hover,
