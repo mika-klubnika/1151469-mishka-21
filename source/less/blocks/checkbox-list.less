@@ -9,7 +9,28 @@
   height: 38px;
 
   &:not(:last-child) {
-    margin-bottom: 23px;
+    margin-bottom: 21px;
+  }
+
+  input {
+    & + label::before {
+      .position (0, 2px);
+    }
+
+    &:checked + label::after {
+      .position (6px, 17px);
+      width: 12px;
+      height: 22px;
+      .border-bottom (@border-2px, @black);
+      .border-right (@border-2px, @black);
+      transform: rotate(45deg);
+    }
+
+    &:checked:disabled + label::after {
+      .border-bottom (@border-2px, @black-opacity-03);
+      .border-right (@border-2px, @black-opacity-03);
+      cursor: default;
+    }
   }
 
   @media (min-width: @tablet) {
@@ -23,7 +44,22 @@
     }
 
     &:not(:last-child) {
-      margin-bottom: 38px;
+      margin-bottom: 25px;
+    }
+
+    input {
+      & + label::before {
+        .position (-4px, -2px);
+      }
+
+      &:checked + label::after {
+        .position (1px, 16px);
+        width: 16px;
+        height: 29px;
+        .border-bottom (@border-2px, @black);
+        .border-right (@border-2px, @black);
+        transform: rotate(45deg);
+      }
     }
   }
 
@@ -37,83 +73,32 @@
 
   @media (min-width: @desktop) {
     width: 180px;
-
-    &:nth-child(-n+3) {
-      margin-bottom: 40px;
-    }
+    padding: 30px 0 30px 80px;
 
     &:not(:nth-child(2n)) {
       margin-right: 0;
     }
 
     &:not(:nth-child(3n)) {
-      margin-right: 77px;
-    }
-  }
-}
-
-.checkbox-list__checked {
-  & + label::before {
-    top: -14px;
-    left: -3px;
-  }
-
-  &:checked + label::after {
-    top: -8px;
-    left: 11px;
-    width: 12px;
-    height: 22px;
-    border-bottom: 2px solid @black;
-    border-right: 2px solid @black;
-    transform: rotate(45deg);
-  }
-
-  &:disabled + label::before {
-    border: 2px solid gray;
-    cursor: default;
-  }
-
-  &:checked:disabled + label::after {
-    border-bottom: 2px solid gray;
-    border-right: 2px solid gray;
-    cursor: default;
-  }
-
-  &:not(:disabled):hover + label::before {
-    border: 2px solid @green-light;
-  }
-
-  &:not(:disabled):active + label::before,
-  &:not(:disabled):focus + label::before {
-    border: 2px solid @black-medium-opacity-03;
-  }
-
-  @media (min-width: @tablet) {
-    & + label::before {
-      top: -4px;
-      left: -2px;
+      margin-right: 81px;
     }
 
-    &:checked + label::after {
-      top: 1px;
-      left: 16px;
-      width: 16px;
-      height: 29px;
-      border-bottom: 2px solid @black;
-      border-right: 2px solid @black;
-      transform: rotate(45deg);
-    }
-  }
-
-  @media (min-width: @desktop) {
-    & + label::before {
-      top: -10px;
-      left: -1px;
+    &:not(:last-child) {
+      margin-bottom: 15px;
     }
 
-    &:checked + label::after {
-      top: -5px;
-      left: 17px;
+    &--color {
+      padding-top: 55px;
+    }
+
+    input {
+      & + label::before {
+        .position (2px, -1px);
+      }
+
+      &:checked + label::after {
+        .position (9px, 16px);
+      }
     }
   }
 }
