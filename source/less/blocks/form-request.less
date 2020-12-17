@@ -141,7 +141,7 @@
     position: absolute;
     width: 40px;
     height: 40px;
-    .border (@border-2px, @black);
+    .border ();
   }
 
   &:checked + label::after {
@@ -150,17 +150,17 @@
   }
 
   &:disabled + label::before {
-    .border (@border-2px, @black-opacity-03);
+    .border(@color: @black-opacity-03);
     cursor: default;
   }
 
   &:not(:disabled):hover + label::before {
-    .border (@border-2px, @green-light);
+    .border(@color: @green-light);
   }
 
   &:not(:disabled):active + label::before,
   &:not(:disabled):focus + label::before {
-    .border (@border-2px, @black-medium-opacity-03);
+    .border(@color: @black-medium-opacity-03);
   }
 
   @media (min-width: @tablet) {
@@ -190,8 +190,8 @@
   position: relative;
   width: 100%;
   height: 50px;
-  .border ( @border-2px, @transparent);
-  .border-bottom (@border-2px, @black);
+  .border(@color: @transparent);
+  .border-bottom ();
 
 
   @media (min-width: @tablet) {
@@ -225,7 +225,7 @@
   &:hover,
   &:focus,
   &:active {
-    .border-bottom (@border-2px, @green-light);
+    .border-bottom(@color: @green-light);
     outline: none;
   }
 
@@ -246,13 +246,13 @@
   width: 100%;
   min-height: 142px;
   padding: 10px;
-  .border ( @border-2px, @black);
+  .border();
   resize: none;
 
   &:hover,
   &:focus,
   &:active {
-    .border ( @border-2px, @green-light);
+    .border(@color: @green-light);
     outline: none;
   }
 }
