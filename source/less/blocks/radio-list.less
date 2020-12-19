@@ -1,7 +1,50 @@
 .radio-list__item {
-  &::before {
-    top: -20px;
-    left: 0;
-    border-radius: 50%;
+  input {
+    & + label::before {
+      .position (1px, 3px);
+      border-radius: 50%;
+    }
+
+    &:checked + label::after {
+      .position (13px, 16px);
+      width: 15px;
+      height: 15px;
+      background-color: @green-light;
+      border-radius: 50%;
+    }
+
+    &:checked:disabled + label::after {
+      background-color: @black-opacity-03;
+      cursor: default;
+    }
+
+    &:not(:checked):disabled + label::after {
+      background-color: @black-opacity-03;
+      cursor: default;
+    }
+  }
+
+  @media (min-width: 345px) {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  @media (min-width: @tablet) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    input {
+      & + label::before {
+        .position (8px, 6px);
+      }
+
+      &:checked + label::after {
+        .position (23px, 22px);
+        width: 20px;
+        height: 20px;
+      }
+    }
   }
 }
