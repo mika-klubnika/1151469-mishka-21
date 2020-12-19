@@ -12,18 +12,22 @@
 
   <header class="page-header">
     <a class="page-header__logo">
-      <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина «MISHKA»">
+      <picture>
+        <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+        <img src="img/mishka-logo-mobile.svg" alt="Логотип магазина «MISHKA»">
+      </picture>
     </a>
 
-    <nav class="main-nav main-nav--opened main-nav--nojs">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">
       </button>
 
       <ul class="main-nav__list main-nav__list--site list">
-        <li class="main-nav__item">
+        <li class="main-nav__item main-nav__item--site">
           <a class="main-nav__link main-nav__link--site link" href="catalog.html">Каталог товаров</a>
         </li>
-        <li class="main-nav__item">
+        <li class="main-nav__item main-nav__item--site">
           <a class="main-nav__link main-nav__link--site link" href="form.html">Вязание на заказ</a>
         </li>
       </ul>
@@ -48,10 +52,10 @@
         </li>
       </ul>
       <ul class="main-nav__list main-nav__list--sale list">
-        <li class="main-nav__item">
+        <li class="main-nav__item main-nav__item--sale">
           <a class="main-nav__link main-nav__link--sale link" href="#">Новые поступления</a>
         </li>
-        <li class="main-nav__item">
+        <li class="main-nav__item main-nav__item--sale">
           <a class="main-nav__link main-nav__link--sale link" href="#">Распродажа</a>
         </li>
       </ul>
@@ -122,8 +126,11 @@
               <dd class="description__feature">15 см</dd>
             </div>
           </dl>
-
-          <img class="product-hit-img" src="img/triple-set-mobile.jpg" width="260" height="315" alt="Вязаные корзинки">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/index-page/triple-set-desktop.jpg 1x, img/index-page/triple-set-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/index-page/triple-set-tablet.jpg 1x, img/index-page/triple-set-tablet@2x.jpg 2x">
+            <img class="product-hit-img" src="img/index-page/triple-set-mobile.jpg" srcset="img/index-page/triple-set-mobile@2x.jpg 2x"  alt="Вязаные корзинки">
+          </picture>
 
           <span class="product-hit__price">Цена: 990 руб.</span>
           <a class="product-hit__link button link" href="#">Заказать</a>
@@ -226,7 +233,7 @@
             </div>
           </dl>
         </div>
-        <div class="contacts__map the-edge">
+        <div class="contacts__map">
           <iframe src="https://yandex.ru/map-widget/v1/-/CCUE5PxWXB" width="768" height="457"></iframe>
         </div>
         <a class="contacts__link button link" href="#">Напишите нам</a>

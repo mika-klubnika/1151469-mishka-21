@@ -152,7 +152,7 @@
   display: flex;
   align-items: center;
 
-  min-height: 80px;
+  min-height: 79px;
   height: fit-content;
   padding-left: 75px;
 
@@ -163,13 +163,27 @@
   }
 
   @media (min-width: @tablet) {
-    min-height: 75px;
+    min-height: 89px;
     border: none;
     padding-top: 10px;
     padding-bottom: 10px;
 
+    &--site {
+      min-height: 65px;
+    }
+
     &:first-child {
       border-top: none;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    &--site {
+      min-height: 89px;
+    }
+
+    &--sale {
+      min-height: 65px;
     }
   }
 }

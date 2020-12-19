@@ -2,12 +2,12 @@
   position: relative;
 
   @media (min-width: @tablet) {
-    background-image: linear-gradient(@white 79px, @gray-medium 79px, @gray-medium 80px, @white-darker 80px);
+    background-image: @header-gradient;
   }
 
   @media (min-width: @tablet) {
     &--dark {
-      background-image: linear-gradient(@white 79px, @gray-medium 79px, @gray-medium 80px, @white-dark 80px);
+      background-image: @header-gradient-dark;
     }
   }
 }
@@ -23,9 +23,13 @@
     position: absolute;
     left: 50px;
     z-index: 1;
+    width: 115px;
+    padding: 15px 0;
   }
 
   @media (min-width: @desktop) {
-    left: 50%;
+    left: 45%;
+    width: 150px;
+    padding-top: 10px;
   }
 }
