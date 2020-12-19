@@ -21,14 +21,14 @@
       .position (6px, 17px);
       width: 12px;
       height: 22px;
-      .border-bottom (@border-2px, @black);
-      .border-right (@border-2px, @black);
+      .border-bottom();
+      .border-right();
       transform: rotate(45deg);
     }
 
     &:checked:disabled + label::after {
-      .border-bottom (@border-2px, @black-opacity-03);
-      .border-right (@border-2px, @black-opacity-03);
+      .border-bottom(@color: @black-opacity-03);
+      .border-right(@color: @black-opacity-03);
       cursor: default;
     }
   }
@@ -56,8 +56,8 @@
         .position (1px, 16px);
         width: 16px;
         height: 29px;
-        .border-bottom (@border-2px, @black);
-        .border-right (@border-2px, @black);
+        .border-bottom();
+        .border-right();
         transform: rotate(45deg);
       }
     }
