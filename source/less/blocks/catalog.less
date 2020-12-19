@@ -23,7 +23,7 @@
   grid-template-columns: 130px 130px;
   grid-template-rows: 195px auto 45px 75px;
   margin: 0 auto;
-  box-shadow: inset 0 0 0 1px @gray-medium;
+  box-shadow: @catalog-item-border;
 
   @media (min-width: @tablet) {
     grid-template-columns: 334px 167px 167px;
@@ -51,23 +51,11 @@
   grid-row-start: 1;
   grid-row-end: 2;
 
-  img {
-    display: flex;
-    width: 260px;
-    height: 195px;
-    background-color: @gray;
-  }
-
   @media (min-width: @tablet) {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 5;
-
-    img {
-      width: 334px;
-      height: 326px;
-    }
   }
 
   @media (min-width: @desktop) {
@@ -75,8 +63,20 @@
     grid-column-end: -1;
     grid-row-start: 1;
     grid-row-end: 2;
+  }
 
-    img {
+  img {
+    display: flex;
+    width: 260px;
+    height: 195px;
+    background-color: @gray;
+
+    @media (min-width: @tablet) {
+      width: 334px;
+      height: 326px;
+    }
+
+    @media (min-width: @desktop) {
       width: 316px;
       height: 462px;
     }
@@ -195,7 +195,7 @@
   width: 23px;
   height: 20px;
   color: @black-opacity-02;
-  background-color: transparent;
+  background-color: @transparent;
   border: none;
 
   &:hover,
