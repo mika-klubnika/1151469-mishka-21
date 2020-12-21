@@ -1,6 +1,4 @@
 .page-header {
-  position: relative;
-
   @media (min-width: @tablet) {
     background-image: @header-gradient;
   }
@@ -10,6 +8,12 @@
       background-image: @header-gradient-dark;
     }
   }
+}
+
+.page-header__wrapper-logo {
+  position: relative;
+  max-width: @desktop;
+  margin: 0 auto;
 }
 
 .page-header__logo {
