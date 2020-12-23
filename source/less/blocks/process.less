@@ -8,7 +8,7 @@
   position: relative;
   display: grid;
   grid-template-columns: @mobile-content-width;
-  grid-template-rows: min-content min-content min-content min-content;
+  grid-template-rows: min-content 150px min-content min-content;
   row-gap: 26px;
 
   min-height: 503px;
@@ -53,7 +53,7 @@
     left: 33px;
     width: 35px;
     height: 30px;
-    background-image: url("../img/video.svg");
+    background-image: url("../img/catalog-page/video.svg");
     background-repeat: no-repeat;
   }
 
@@ -102,6 +102,21 @@
     grid-row-end: 4;
     width: 680px;
     height: 455px;
+  }
+
+  img {
+    width: 260px;
+    height: 150px;
+
+    @media (min-width: @tablet) {
+      width: 668px;
+      height: 455px;
+    }
+
+    @media (min-width: @desktop) {
+      width: 1050px;
+      height: 455px;
+    }
   }
 }
 

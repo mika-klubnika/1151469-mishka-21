@@ -9,8 +9,8 @@ for (var button of buttons) {
   }
 };
 
-emptyField.addEventListener("click", function () {
-  modal.classList.remove("modal__show");
+emptyField.addEventListener("click", function (evt) {
+  evt.target === emptyField && modal.classList.remove("modal__show");
 });
 
 window.addEventListener("keydown", function (evt) {
