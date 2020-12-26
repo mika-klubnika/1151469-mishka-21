@@ -3,6 +3,19 @@
 
   &--blank-page {
     margin: 0 auto;
+
+    svg {
+      width: 260px;
+      height: auto;
+    }
+  }
+
+  @media (min-width: @tablet) {
+    &--blank-page {
+      svg {
+        width: 540px;
+      }
+    }
   }
 }
 
