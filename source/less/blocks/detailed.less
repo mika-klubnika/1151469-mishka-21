@@ -34,7 +34,7 @@
   }
 
   @media (min-width: @desktop) {
-    &:first-child {
+    &:not(:last-child) {
       margin-right: 0;
       margin-bottom: 30px;
     }
@@ -43,10 +43,16 @@
 
 .detailed__name {
   width: 76px;
+  padding-right: 10px;
 }
 
 .detailed__description {
+  width: 188px;
   margin: 0;
+
+  @media (min-width: @tablet) {
+    width: 260px;
+  }
 }
 
 .detailed__description address {
