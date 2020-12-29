@@ -23,6 +23,15 @@
   padding: 22px 0;
   margin: 0 auto;
 
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet) {
     position: absolute;
     left: 50px;
@@ -32,7 +41,7 @@
   }
 
   @media (min-width: @desktop) {
-    left: 45%;
+    left: 43%;
     width: 150px;
     padding-top: 10px;
   }
@@ -40,6 +49,7 @@
   img {
     width: 86px;
     height: 35px;
+    vertical-align: middle;
 
     @media (min-width: @tablet) {
       width: 114px;

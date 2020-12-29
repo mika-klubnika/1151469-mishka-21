@@ -3,8 +3,11 @@
 }
 
 .page-body {
+  display: flex;
+  flex-direction: column;
+
   min-width: @mobile;
-  min-height: 100%;
+  min-height: 100vh;
   margin: 0;
 
   font-family: "Open Sans", "Arial", sans-serif;
@@ -51,20 +54,30 @@
 }
 
 .title {
+  --width-block: @mobile;
+  --padding: 30px;
+
   font-weight: bold;
   font-size: 25px;
   line-height: 30px;
 
   &--the-main-for-the-other-pages {
+    width: calc(var(--width-block) - (var(--padding) * 2));
+    text-align: center;
     font-size: 27px;
   }
 
   @media (min-width: @tablet) {
+    --width-block: @tablet;
+    --padding: 50px;
+
     font-size: 43px;
     line-height: 50px;
   }
 
   @media (min-width: @desktop) {
+    --width-block: @desktop;
+
     font-size: 53px;
     line-height: 57px;
   }
@@ -82,6 +95,7 @@
   @media (min-width: @tablet) {
     min-height: 160px;
     padding-top: 30px;
+    padding-bottom: 45px;
 
     &::after {
       content: "";
@@ -115,6 +129,7 @@
 
   width: @mobile-content-width;
   min-height: 52px;
+  padding: 7px;
 
   font-weight: bold;
   font-size: 18px;
