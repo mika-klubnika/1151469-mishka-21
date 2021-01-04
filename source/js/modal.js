@@ -1,13 +1,13 @@
-var buttons = document.querySelectorAll(".modal-button");
+var buttons = Array.from(document.querySelectorAll(".modal-button"));
 var modal = document.querySelector(".modal");
 var emptyField = document.querySelector(".modal__base");
 
-for (var button of buttons) {
-  button.onclick = function (evt) {
+buttons.forEach(button => {
+  button.addEventListener("click",(evt) => {
     evt.preventDefault();
     modal.classList.add("modal__show");
-  }
-};
+  })
+});
 
 emptyField.addEventListener("click", function (evt) {
   evt.target === emptyField && modal.classList.remove("modal__show");

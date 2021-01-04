@@ -39,6 +39,7 @@ const html = () => {
   return gulp.src("source/*.html")
   .pipe(htmlmin({collapseWhitespace: true}))
   .pipe(gulp.dest("build"))
+  .pipe(sync.stream());
 }
 
 exports.html = html;
@@ -48,7 +49,7 @@ exports.html = html;
 const scripts = () => {
   return gulp.src("source/js/*.js")
   .pipe(uglify())
-  // .pipe(rename("script.min.js"))
+  .pipe(rename(path => path.basename += ".min"))
   .pipe(gulp.dest("build/js"))
   .pipe(sync.stream());
 }
@@ -95,7 +96,8 @@ exports.sprite = sprite;
 const copy = () => {
   return gulp.src ([
     "source/fonts/*.{woff2,woff}",
-    "source/img/**/*.{jpg,png,svg}"
+    "source/img/**/*.{jpg,png,svg,webp}",
+    "!source/img/icons/**/*"
   ],
   {
     base: "source"
@@ -143,11 +145,9 @@ const build = gulp.series(
     html,
     scripts,
     sprite,
-    copy,
-    images,
-    createWebp
+    copy
   )
-)
+);
 
 exports.build = build;
 
@@ -160,8 +160,7 @@ exports.default = gulp.series(
     html,
     scripts,
     sprite,
-    copy,
-    createWebp
+    copy
   ),
   gulp.series(
     server,
