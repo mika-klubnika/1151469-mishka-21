@@ -1,10 +1,10 @@
-var upButton = document.querySelector('.up-button');
+var upButton = document.querySelector(".up-button");
 
 window.onscroll = function () {
   if (window.pageYOffset > 800) {
-    upButton.classList.add('shown');
+    upButton.classList.add("shown");
   } else {
-    upButton.classList.remove('shown');
+    upButton.classList.remove("shown");
   }
 
 };
