@@ -9,11 +9,11 @@ buttons.forEach(button => {
   })
 });
 
-emptyField.addEventListener("click", function (evt) {
+emptyField.addEventListener("click", (evt) => {
   evt.target === emptyField && modal.classList.remove("modal__show");
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener("keydown", (evt) => {
   if (evt.keyCode === 27) {
     evt.preventDefault();
     if (modal.classList.contains("modal__show")) {

@@ -47,6 +47,7 @@
 
 .link {
   color: @black;
+  transition: color 0.3s;
 }
 
 .text {
@@ -138,6 +139,11 @@
   color: @black-medium;
 
   border: 2px solid @black-medium;
+  transition-property: color, background-color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in;
+
+  cursor: pointer;
 
   &:hover,
   &:focus {

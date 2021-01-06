@@ -142,11 +142,15 @@
     width: 40px;
     height: 40px;
     .border ();
+
+    transition: border ease-in 0.2s;
+    cursor: pointer;
   }
 
   &:checked + label::after {
     content: "";
     position: absolute;
+    cursor: pointer;
   }
 
   &:disabled + label::before {
@@ -208,6 +212,7 @@
 .form-request__field {
   padding-top: 0;
   background-color: @transparent;
+  transition: border ease-in 0.2s;
 
   &::placeholder {
     font-size: 17px;
