@@ -88,6 +88,7 @@
 .main-nav__list {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 
   @media (min-width: @tablet) {
     flex-direction: row;
@@ -112,6 +113,8 @@
   }
 
   @media (min-width: @desktop) {
+    margin-right: 220px;
+    max-width: 405px;
     order: 0;
 
     & > .main-nav__item {
@@ -130,10 +133,13 @@
     display: flex;
     flex-basis: 100%;
     justify-content: flex-end;
+    margin-left: 150px;
   }
 
   @media (min-width: @desktop) {
     flex-basis: auto;
+    max-width: 360px;
+    margin-left: 0;
   }
 }
 
@@ -225,6 +231,10 @@
   svg {
     position: absolute;
     opacity: 0.2;
+
+    transition-property: color, opacity;
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
   }
 
   &[href]:hover,

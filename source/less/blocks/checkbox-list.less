@@ -6,31 +6,10 @@
 }
 
 .checkbox-list__item {
-  height: 38px;
+  min-height: 38px;
 
   &:not(:last-child) {
-    margin-bottom: 21px;
-  }
-
-  input {
-    & + label::before {
-      .position (0, 2px);
-    }
-
-    &:checked + label::after {
-      .position (6px, 17px);
-      width: 12px;
-      height: 22px;
-      .border-bottom();
-      .border-right();
-      transform: rotate(45deg);
-    }
-
-    &:checked:disabled + label::after {
-      .border-bottom(@color: @black-opacity-03);
-      .border-right(@color: @black-opacity-03);
-      cursor: default;
-    }
+    margin-bottom: 20px;
   }
 
   @media (min-width: @tablet) {
@@ -44,22 +23,7 @@
     }
 
     &:not(:last-child) {
-      margin-bottom: 25px;
-    }
-
-    input {
-      & + label::before {
-        .position (-4px, -2px);
-      }
-
-      &:checked + label::after {
-        .position (1px, 16px);
-        width: 16px;
-        height: 29px;
-        .border-bottom();
-        .border-right();
-        transform: rotate(45deg);
-      }
+      margin-bottom: 30px;
     }
   }
 
@@ -73,7 +37,7 @@
 
   @media (min-width: @desktop) {
     width: 180px;
-    padding: 30px 0 30px 80px;
+    padding: 20px 0 20px 80px;
 
     &:not(:nth-child(2n)) {
       margin-right: 0;
@@ -90,15 +54,51 @@
     &--color {
       padding-top: 55px;
     }
+  }
+}
 
-    input {
-      & + label::before {
-        .position (2px, -1px);
-      }
+.checkbox-list__item input {
+  & + label::before {
+    .position (2px, -3px);
+  }
 
-      &:checked + label::after {
-        .position (9px, 16px);
-      }
+  &:checked + label::after {
+    .position (8px, 12px);
+    width: 12px;
+    height: 22px;
+    .border-bottom();
+    .border-right();
+    transform: rotate(45deg);
+  }
+
+  &:checked:disabled + label::after {
+    .border-bottom(@color: @black-opacity-03);
+    .border-right(@color: @black-opacity-03);
+    cursor: default;
+  }
+
+  @media (min-width: @tablet) {
+    & + label::before {
+      .position (2px, -2px);
+    }
+
+    &:checked + label::after {
+      .position (9px, 14px);
+      width: 16px;
+      height: 29px;
+      .border-bottom();
+      .border-right();
+      transform: rotate(45deg);
+    }
+  }
+
+  @media (min-width: @desktop) {
+    & + label::before {
+      .position (2px, -1px);
+    }
+
+    &:checked + label::after {
+      .position (9px, 16px);
     }
   }
 }
