@@ -1,12 +1,12 @@
 .radio-list__item {
   input {
     & + label::before {
-      .position (1px, 3px);
+      .position (3px, -2px);
       border-radius: 50%;
     }
 
     &:checked + label::after {
-      .position (13px, 16px);
+      .position (16px, 11px);
       width: 15px;
       height: 15px;
       background-color: @green-light;
@@ -32,16 +32,16 @@
 
   @media (min-width: @tablet) {
     &:not(:last-child) {
-      margin-bottom: 10px;
+      margin-bottom: 30px;
     }
 
     input {
       & + label::before {
-        .position (8px, 6px);
+        .position (2px, 6px);
       }
 
       &:checked + label::after {
-        .position (23px, 22px);
+        .position (18px, 22px);
         width: 20px;
         height: 20px;
       }

@@ -3,6 +3,17 @@
   padding-top: 63px;
   padding-bottom: 40px;
 
+  @media (min-width: @tablet) {
+    padding-top: 70px;
+    padding-bottom: 55px;
+  }
+
+  @media (min-width: @desktop) {
+    display: flex;
+    padding-top: 160px;
+    padding-bottom: 50px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -12,24 +23,13 @@
     background-image: url("../img/zigzag-line-desktop.svg");
     background-size: contain;
     background-repeat: repeat-x;
-  }
 
-  @media (min-width: @tablet) {
-    padding-top: 70px;
-    padding-bottom: 55px;
-
-    &::before {
+    @media (min-width: @tablet) {
       top: 45px;
       height: 17px;
     }
-  }
 
-  @media (min-width: @desktop) {
-    display: flex;
-    padding-top: 160px;
-    padding-bottom: 50px;
-
-    &::before {
+    @media (min-width: @desktop) {
       top: 68px;
       height: 23px;
     }
@@ -91,13 +91,13 @@
   @media (min-width: @tablet) {
     position: absolute;
     display: flex;
-    top: -10px;
-    right: 53px;
+    top: 30px;
+    right: 55px;
   }
 
   @media (min-width: @desktop) {
-    top: 30px;
-    left: 60px;
+    top: 62px;
+    left: 65px;
   }
 }
 
