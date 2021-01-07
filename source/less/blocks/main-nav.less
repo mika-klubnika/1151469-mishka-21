@@ -231,7 +231,10 @@
   svg {
     position: absolute;
     opacity: 0.2;
-    transition: 0.3s;
+
+    transition-property: color, opacity;
+    transition-timing-function: ease;
+    transition-duration: 0.3s;
   }
 
   &[href]:hover,

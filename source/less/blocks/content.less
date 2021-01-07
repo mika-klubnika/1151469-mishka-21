@@ -105,7 +105,10 @@
   font-size: 19px;
   color: @white;
   background-color: @green;
-  transition: 0.3s;
+
+  transition-property: margin-top, min-height;
+  transition-timing-function: ease-in;
+  transition-duration: 0.3s;
 
   &:nth-child(2) {
     background-color: @green-dark;
