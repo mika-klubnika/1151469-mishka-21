@@ -24,7 +24,9 @@
   margin: 0 auto;
   margin-bottom: 30px;
 
-  box-shadow: inset 0 0 0 1px @gray-medium;
+  box-shadow: 0 0 0 0 @transparent,
+  inset 0 0 0 1px @gray-medium;
+  transition: box-shadow 0.3s;
 
   @media (min-width: @tablet) {
     grid-template-columns: 668px;
