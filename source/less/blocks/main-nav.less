@@ -153,6 +153,7 @@
       width: 220px;
       padding-right: 20px;
       padding-left: 0;
+      padding-top: 17px;
     }
   }
 }
@@ -160,10 +161,10 @@
 .main-nav__item {
   position: relative;
   display: flex;
-  align-items: center;
 
   min-height: 79px;
   height: fit-content;
+  padding-top: 30px;
   padding-left: 75px;
 
   border-bottom: @border-gray;
@@ -175,11 +176,11 @@
   @media (min-width: @tablet) {
     min-height: 89px;
     border: none;
-    padding-top: 10px;
     padding-bottom: 10px;
 
     &--site {
       min-height: 65px;
+      padding-top: 21px;
     }
 
     &--cart {
@@ -194,6 +195,7 @@
   @media (min-width: @desktop) {
     &--site {
       min-height: 89px;
+      padding-top: 30px;
     }
 
     &--sale {
@@ -289,23 +291,25 @@
     }
 
     svg {
-      top: -11px;
+      top: 5px;
       left: 20px;
     }
   }
 
   @media (min-width: @desktop) {
     svg {
-      top: -10px;
       left: 22px;
     }
   }
 }
 
-.main-nav__link--cart {
-  svg {
-    left: -50px;
-    top: 0;
+.main-nav__link--cart svg {
+  left: -45px;
+  top: 0;
+
+  @media (min-width: @tablet) {
+    left: -52px;
+    top: 3px;
   }
 }
 

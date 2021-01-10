@@ -25,7 +25,7 @@
     @media (min-width: @tablet) {
       content: "";
       position: absolute;
-      bottom: -5px;
+      top: 665px;
       width: 100%;
       height: 20px;
       background-image: url("../img/zigzag-fill-desktop.svg");
@@ -83,11 +83,20 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-top: auto;
+  margin-top: 100px;
+
+  @media (min-width: @width-of-the-broken-block) {
+    margin-top: 130px;
+  }
 
   @media (min-width: @tablet) {
     flex-direction: row;
     padding: 0 50px;
+    margin-top: 352px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-top: 333px;
   }
 }
 
