@@ -14,17 +14,14 @@
 <body class="page-body">
 
   <header class="page-header">
-    <div class="page-header__wrapper-logo">
-      <a class="page-header__logo">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <a class="main-nav__logo">
         <picture>
           <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
-          <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина «MISHKA»">
+          <img class="main-nav__logo-img" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина «MISHKA»">
         </picture>
       </a>
-    </div>
-
-    <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
 
       <ul class="main-nav__list main-nav__list--site list">
@@ -59,7 +56,7 @@
           <a class="main-nav__link main-nav__link--sale link" href="blank.html">Распродажа</a>
         </li>
       </ul>
-      <p class="main-nav__text text" aria-label="Бесплатная доставка по России"></p>
+      <p class="main-nav__text text">Бесплатная доставка по России</p>
     </nav>
   </header>
 
@@ -115,7 +112,7 @@
 
             <source media="(min-width: 1150px)" srcset="img/index-page/triple-set-desktop.jpg 1x, img/index-page/triple-set-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/index-page/triple-set-tablet.jpg 1x, img/index-page/triple-set-tablet@2x.jpg 2x">
-            <img class="product-hit-img" src="img/index-page/triple-set-mobile.jpg" srcset="img/index-page/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки">
+            <img class="product-hit__img" src="img/index-page/triple-set-mobile.jpg" srcset="img/index-page/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки">
           </picture>
 
           <span class="product-hit__price">Цена: 990 руб.</span>
@@ -194,7 +191,7 @@
       <div class="contacts__wrapper">
         <div class="contacts__inner">
           <h3 class="contacts__title text">Контакты</h3>
-          <svg class="contacts__svg" width="47">
+          <svg class="contacts__svg" width="47" height="81">
             <use xlink:href="img/sprite.svg#flag"></use>
           </svg>
           <dl class="detailed">
@@ -207,7 +204,7 @@
             <div class="detailed__item">
               <dt class="detailed__name">адрес:</dt>
               <dd class="detailed__description">
-                <address>г. Санкт-Петербург<br> ул. Большая Конюшенная<br> д. 19/8, офис 101</address>
+                <address class="detailed__address">г. Санкт-Петербург<br> ул. Большая Конюшенная<br> д. 19/8, офис 101 </address>
               </dd>
             </div>
           </dl>
@@ -271,20 +268,20 @@
       <form class="modal__form" method="get" action="https://echo.htmlacademy.ru">
         <h3 class="modal__title text">Добавить в корзину</h3>
         <p class="modal__text">Выберите размер:</p>
-          <ul class="modal__list list">
-            <li class="modal__item">
-              <input class="modal__size-input visually-hidden" type="radio" name="size" value="S" id="size-S" checked>
-              <label class="modal__size-label" for="size-S">S</label>
-            </li>
-            <li class="modal__item">
-              <input class="modal__size-input visually-hidden" type="radio" name="size" value="M" id="size-M">
-              <label class="modal__size-label" for="size-M">M</label>
-            </li>
-            <li class="modal__item">
-              <input class="modal__size-input visually-hidden" type="radio" name="size" value="L" id="size-L">
-              <label class="modal__size-label" for="size-L">L</label>
-              </li>
-          </ul>
+        <ul class="modal__list list">
+          <li class="modal__item">
+            <input class="modal__size-input visually-hidden" type="radio" name="size" value="S" id="size-S" checked>
+            <label class="modal__size-label" for="size-S">S</label>
+          </li>
+          <li class="modal__item">
+            <input class="modal__size-input visually-hidden" type="radio" name="size" value="M" id="size-M">
+            <label class="modal__size-label" for="size-M">M</label>
+          </li>
+          <li class="modal__item">
+            <input class="modal__size-input visually-hidden" type="radio" name="size" value="L" id="size-L">
+            <label class="modal__size-label" for="size-L">L</label>
+          </li>
+        </ul>
         <button class="modal__button">Добавить</button>
       </form>
     </div>

@@ -37,6 +37,10 @@
   @media (min-width: @tablet) {
     padding: 0 50px;
   }
+
+  @media (min-width: @desktop) {
+    padding: 0 50px;
+  }
 }
 
 .list {
@@ -107,10 +111,6 @@
       background-image: url("../img/zigzag-fill-desktop.svg");
       background-repeat: repeat-x;
       background-size: contain;
-
-      @media (min-resolution: @resolution) {
-        background-image: url("../img/zigzag-fill-desktop@2x.svg");
-      }
     }
   }
 
@@ -144,6 +144,10 @@
   transition-timing-function: ease-in;
 
   cursor: pointer;
+
+  @media (min-width: @tablet) {
+    font-size: 17px;
+  }
 
   &:hover,
   &:focus {

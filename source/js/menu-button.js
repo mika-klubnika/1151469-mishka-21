@@ -8,8 +8,8 @@ navToggle.addEventListener("click", function() {
   navMain.classList.toggle("main-nav--opened")
 
   if(navMain.classList.contains("main-nav--closed")) {
-    navToggle.setAttribute('aria-label', "Открыть меню");
+    navToggle.setAttribute("aria-label", "Открыть меню");
   } else {
-    navToggle.setAttribute('aria-label', "Закрыть меню");
+    navToggle.setAttribute("aria-label", "Закрыть меню");
   }
 });

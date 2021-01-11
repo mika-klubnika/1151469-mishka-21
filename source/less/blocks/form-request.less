@@ -5,7 +5,6 @@
 
   @media (min-width: @tablet) {
     font-size: 19px;
-    line-height: 18px;
   }
 }
 
@@ -29,12 +28,12 @@
   padding-bottom: 15px;
 
   &--type {
-    padding-top: 23px;
+    padding-top: 21px;
   }
 
   @media (min-width: @tablet) {
     min-height: var(--standard-heigh);
-    padding-top: 53px;
+    padding-top: 49px;
 
     &:nth-of-type(2n) {
       background-color: @white-dark;
@@ -50,6 +49,8 @@
   }
 
   @media (min-width: @desktop) {
+    padding-top: 50px;
+
     &--color {
       min-height: var(--standard-heigh);
     }
@@ -102,6 +103,7 @@
   }
 
   @media (min-width: @desktop) {
+    margin-top: 18px;
     margin-right: 75px;
 
     &--contacts {
@@ -210,7 +212,7 @@
 }
 
 .form-request__field {
-  padding-top: 0;
+  padding-right: 35px;
   background-color: @transparent;
   transition: border-color 0.2s ease-in;
 
@@ -220,9 +222,7 @@
     color: @black-opacity-03;
 
     @media (min-width: @tablet) {
-      &::placeholder {
-        font-size: 19px;
-      }
+      font-size: 19px;
     }
   }
 
@@ -237,12 +237,17 @@
     color: @black-opacity-02;
   }
 
-  &:hover + svg {
+  &:hover + svg,
+  &:focus + svg {
     color: @green-light;
   }
 
   @media (min-width: @tablet) {
-    padding: 10px 45px 10px 17px;
+    padding: 5px 54px 10px 12px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-left: 17px;
   }
 }
 
@@ -252,6 +257,11 @@
   padding: 10px;
   .border();
   resize: none;
+
+  @media (min-width: @tablet) {
+    padding-top: 12px;
+    padding-left: 17px;
+  }
 
   &:hover,
   &:focus,
@@ -306,19 +316,26 @@
 
   svg {
     position: absolute;
-    right: 10px;
-    bottom: 15px;
+    right: 4px;
+    bottom: 18px;
   }
 
   @media (min-width: @tablet) {
     display: flex;
 
     svg {
-      bottom: 25px;
+      right: 23px;
+      bottom: 26px;
     }
 
     &:not(:last-child) {
-      margin-bottom: 10px;
+      margin-bottom: 13px;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    svg {
+      right: 6px;
     }
   }
 }
@@ -328,10 +345,11 @@
 
   @media (min-width: @tablet) {
     padding-top: 15px;
-    padding-bottom: 53px;
+    padding-bottom: 47px;
   }
 
   @media (min-width: @desktop) {
+    padding-top: 10px;
     padding-bottom: 50px;
   }
 }
@@ -355,6 +373,8 @@
 
 .form-request__button {
   margin: 0 auto;
+  font-size: 17px;
+  line-height: 16px;
   background-color: @transparent;
 
   @media (min-width: @tablet) {

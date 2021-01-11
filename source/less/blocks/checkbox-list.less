@@ -6,7 +6,7 @@
 }
 
 .checkbox-list__item {
-  min-height: 38px;
+  height: min-content;
 
   &:not(:last-child) {
     margin-bottom: 20px;
@@ -23,7 +23,7 @@
     }
 
     &:not(:last-child) {
-      margin-bottom: 30px;
+      margin-bottom: 28px;
     }
   }
 
@@ -79,11 +79,11 @@
 
   @media (min-width: @tablet) {
     & + label::before {
-      .position (2px, -2px);
+      .position (1px, 3px);
     }
 
     &:checked + label::after {
-      .position (9px, 14px);
+      .position (7px, 20px);
       width: 16px;
       height: 29px;
       .border-bottom();
@@ -94,11 +94,11 @@
 
   @media (min-width: @desktop) {
     & + label::before {
-      .position (2px, -1px);
+      .position (0, -4px);
     }
 
     &:checked + label::after {
-      .position (9px, 16px);
+      .position (5px, 14px);
     }
   }
 }

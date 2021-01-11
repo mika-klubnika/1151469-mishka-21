@@ -4,7 +4,7 @@
   background-color: @white-darker;
   background-image: url("../img/index-page/hero-mobile.jpg");
   background-repeat: no-repeat;
-  background-position: 50% -20px;
+  background-position: 51% -20px;
 
   @media (min-resolution: @resolution) {
     background-image: url("../img/index-page/hero-mobile@2x.jpg");
@@ -56,7 +56,7 @@
 }
 
 .content__title {
-  padding: 75px 30px 20px 30px;
+  padding: 73px 30px 20px 30px;
 
   font-weight: bold;
   font-size: 27px;
@@ -64,7 +64,7 @@
   text-align: center;
 
   @media (min-width: @tablet) {
-    padding: 90px 50px 20px 50px;
+    padding: 90px 66px 20px 50px;
     font-size: 43px;
     line-height: 50px;
 
@@ -74,6 +74,7 @@
   }
 
   @media (min-width: @desktop) {
+    padding-right: 53px;
     font-size: 53px;
     line-height: 57px;
   }
@@ -83,20 +84,11 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-top: 100px;
-
-  @media (min-width: @width-of-the-broken-block) {
-    margin-top: 130px;
-  }
+  margin-top: auto;
 
   @media (min-width: @tablet) {
     flex-direction: row;
     padding: 0 50px;
-    margin-top: 352px;
-  }
-
-  @media (min-width: @desktop) {
-    margin-top: 333px;
   }
 }
 
@@ -108,16 +100,12 @@
 
   min-width: 50%;
   min-height: var(--height-content-link);
-  padding: 20px 30px;
+  padding: 22px 33px 10px 29px;
 
   font-weight: bold;
   font-size: 19px;
   color: @white;
   background-color: @green;
-
-  transition-property: margin-top, min-height;
-  transition-timing-function: ease-in;
-  transition-duration: 0.3s;
 
   &:nth-child(2) {
     background-color: @green-dark;
@@ -129,12 +117,16 @@
 
   @media (min-width: @tablet) {
     --height-content-link: 123px;
-    padding-left: 40px;
-    padding-top: 30px;
+    padding-left: 32px;
+    padding-top: 26px;
+    padding-right: 38px;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   @media (min-width: @desktop) {
     --height-content-link: 134px;
+    padding-left: 37px;
   }
 
   &:hover {

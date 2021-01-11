@@ -16,10 +16,57 @@
   }
 }
 
+.main-nav__logo {
+  display: flex;
+  width: 90px;
+  height: min-content;
+  padding: 22px 0;
+  margin: 0 auto;
+  transition: opacity 0.3s;
+
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet) {
+    width: 115px;
+    margin: 0;
+    padding: 0;
+    padding-top: 22px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 150px;
+    padding-top: 9px;
+    order: 2;
+  }
+}
+
+.main-nav__logo-img {
+  width: 86px;
+  height: 35px;
+  vertical-align: middle;
+
+  @media (min-width: @tablet) {
+    width: 114px;
+    height: 46px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 149px;
+    height: 72px;
+  }
+}
+
 .main-nav__toggle {
   position: absolute;
-  top: -60px;
-  right: 20px;
+  top: 18px;
+  right: 22px;
   display: block;
   width: 40px;
   height: 40px;
@@ -113,9 +160,8 @@
   }
 
   @media (min-width: @desktop) {
-    margin-right: 220px;
     max-width: 405px;
-    order: 0;
+    order: 1;
 
     & > .main-nav__item {
       width: 184px;
@@ -131,15 +177,16 @@
 .main-nav__list--user {
   @media (min-width: @tablet) {
     display: flex;
-    flex-basis: 100%;
+    flex-basis: 75%;
     justify-content: flex-end;
-    margin-left: 150px;
+    margin-left: auto;
   }
 
   @media (min-width: @desktop) {
     flex-basis: auto;
     max-width: 360px;
-    margin-left: 0;
+    margin-left: 51px;
+    order: 3;
   }
 }
 
@@ -148,6 +195,7 @@
 
   @media (min-width: @desktop) {
     display: flex;
+    order: 4;
 
     & > .main-nav__item {
       width: 220px;
@@ -164,7 +212,7 @@
 
   min-height: 79px;
   height: fit-content;
-  padding-top: 30px;
+  padding-top: 28px;
   padding-left: 75px;
 
   border-bottom: @border-gray;
@@ -175,6 +223,7 @@
 
   @media (min-width: @tablet) {
     min-height: 89px;
+    padding-top: 33px;
     border: none;
     padding-bottom: 10px;
 
@@ -195,7 +244,7 @@
   @media (min-width: @desktop) {
     &--site {
       min-height: 89px;
-      padding-top: 30px;
+      padding-top: 33px;
     }
 
     &--sale {
@@ -291,8 +340,8 @@
     }
 
     svg {
-      top: 5px;
-      left: 20px;
+      top: 4px;
+      left: 23px;
     }
   }
 
@@ -314,19 +363,14 @@
 }
 
 .main-nav__text {
-  &::before {
-    content: "";
-  }
+  display: none;
 
   @media (min-width: @tablet) {
     display: flex;
     align-items: center;
-    order: 3;
+    order: 5;
     margin-left: auto;
     padding-left: 20px;
-
-    &::before {
-      content: attr(aria-label);
-    }
+    color: @black-medium;
   }
 }
