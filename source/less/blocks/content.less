@@ -95,12 +95,13 @@
 .content__link {
   --height-content-link: 103px;
 
+  position: relative;
   display: flex;
   justify-content: space-between;
 
   min-width: 50%;
   min-height: var(--height-content-link);
-  padding: 22px 33px 10px 29px;
+  padding: 22px 100px 10px 29px;
 
   font-weight: bold;
   font-size: 19px;
@@ -112,14 +113,18 @@
   }
 
   svg {
+    position: absolute;
+    right: 35px;
+    top: 30px;
     opacity: 0.5;
   }
 
   @media (min-width: @tablet) {
     --height-content-link: 123px;
+    max-width: 50%;
     padding-left: 32px;
     padding-top: 26px;
-    padding-right: 38px;
+    padding-bottom: 30px;
     font-size: 20px;
     line-height: 30px;
   }
